@@ -1,4 +1,4 @@
-data = [
+[
     {
       "question" : "How many male sexual partners have you had?",
       "threshold" : "10",
@@ -29,4 +29,4 @@ data = [
       "threshold" : "true",
       "points" : "2",
     },
-  ]
+]
