@@ -1,12 +1,16 @@
 [
     {
       "question" : "How many male sexual partners have you had?",
+      "type" : "text",
+      "ref" : "numPartners",
       "threshold" : "10",
-      "points" : "2",
+      "points" : "2"
     },
 
     {
       "question" : "With how many partners have you had anal sex without condoms when you were the bottom (i.e. condomless receptive anal sex)?",
+      "type" : "text",
+      "ref" : "withoutCondoms",
       "threshold" : "true",
       "points" : "3",
       "dependency" : 
@@ -14,19 +18,23 @@
       {
         "question" : "0",
         "threshold" : "5"
-      },
+      }
 
     },
 
     {
       "question" : "With how many HIV-positive partners have you had anal sex without condoms when you were the bottom (i.e. condomless receptive anal sex)?",
+      "type" : "text",
+      "ref" : "hivPartners",
       "threshold" : "true",
-      "points" : "3",
+      "points" : "3"
     },
 
     {
       "question" : "Have you been diagnosed with gonorrhea, chlamydia, or syphilis?",
+      "type" : "radio",
+      "ref" : "stds",
       "threshold" : "true",
-      "points" : "2",
-    },
+      "points" : "2"
+    }
 ]

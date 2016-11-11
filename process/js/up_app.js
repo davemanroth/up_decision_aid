@@ -1,20 +1,36 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var AboutYou = require('./about_you');
+const ABOUT_DATA = './js/about_you_questions.json';
 
-class UpDecisionAid extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+var UpDecisionAid = React.createClass({
+  getInitialState: function () {
+    return {
+      data: [],
+    }
+  },
 
-  render () {
+  componentDidMount: function () {
+    this.serverRequest = $.get(ABOUT_DATA, function (data) {
+      this.setState({
+        data: data,
+      })
+    }.bind(this));
+  },//componentDidMount
+
+  componentWillUnmount: function () {
+    this.serverReqest.abort();
+  },//componentWillUnmount
+
+
+  render: function () {
     return (
-      <div>
-        <h1>This is a test</h1>
-      </div>
+      <AboutYou 
+        questionData={ this.state.data } 
+      />
     );
   } //render
-} // UpDecisionAid
+}); // UpDecisionAid
 
 
 ReactDOM.render(

@@ -1,29 +1,46 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const ABOUT_DATA = './js/about_you_questions.json';
+var React = require('react');
 
-class AboutYou extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+var AboutYou = React.createClass({
 
-  componentDidMount () {
-    this.serverRequest = $.get(ABOUT_DATA, function (data) {
-      this.state{
-        data: data,
-        safeData: data
-      }
-    }.bind(this));
-  }
-
-  componentWillUnmount () {
-    this.serverReqest.abort();
-  }
-
-
-  render () {
+  getInputType: function (type, ref) {
+    if( type === "radio") {
+      return (
+        <div className="radios">
+          <div className="radio">
+            <label>
+              <input type={ type } ref={ ref } className="form-control" name={ ref } value="yes" /> Yes
+            </label>
+          </div>
+          <div className="radio">
+            <label>
+              <input type={ type } ref={ ref } className="form-control" name={ ref } value="no" /> No
+            </label>
+          </div>
+        </div>
+      );
+    }
     return (
+      <input type={ type } ref={ ref } className="form-control text-input" />
     );
-  }
-}
+  },
 
+  render: function () {
+    var _this = this;
+    return (
+      <form className="questions" onSubmit={ this.handleSubmit }>
+        { this.props.questionData.map( function (entry, idx) {
+          return (
+            <div key={ idx } className="form-group">
+              <p>{ entry.question }</p>
+              { _this.getInputType(entry.type, entry.ref) }
+            </div>
+          );
+        })}
+        <button type="submit" className="btn btn-primary btn-lg">Calculate risk</button>
+      </form>
+    )
+  }
+
+});
+
+module.exports = AboutYou;
