@@ -32,8 +32,18 @@ var AboutYou = React.createClass({
       stds: this.refs.stds.value,
     };
     e.preventDefault();
-    this.props.submitData(data);
+    if (this.isValidData(data)) {
+      this.props.submitData(data);
+    }
   },
+
+  isValidData: function (data) {
+    return isNumerical(data);
+  },
+
+  isNumerical: function (data) {
+  }
+
 
   render: function () {
     var _this = this;
