@@ -6,8 +6,17 @@ const ABOUT_DATA = './js/about_you_questions.json';
 var UpDecisionAid = React.createClass({
   getInitialState: function () {
     return {
+      step: 1,
       data: [],
-    }
+      user: 
+      {
+        step1: null,
+        step2: null,
+        step3: null,
+        step4: null,
+        notes: null,
+      }
+    };
   },
 
   componentDidMount: function () {
@@ -22,11 +31,21 @@ var UpDecisionAid = React.createClass({
     this.serverReqest.abort();
   },//componentWillUnmount
 
+  submitData: function (data) {
+    console.log(data);
+    this.setState({
+      user: {
+        step1: data
+      }
+    });
+  },
+
 
   render: function () {
     return (
       <AboutYou 
         questionData={ this.state.data } 
+        submitData={ this.submitData }
       />
     );
   } //render

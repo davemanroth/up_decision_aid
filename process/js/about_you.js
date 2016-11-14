@@ -24,6 +24,17 @@ var AboutYou = React.createClass({
     );
   },
 
+  handleSubmit: function (e) {
+    var data = {
+      numPartners: this.refs.numPartners.value,
+      withoutCondoms: this.refs.withoutCondoms.value,
+      hivParners: this.refs.hivPartners.value,
+      stds: this.refs.stds.value,
+    };
+    e.preventDefault();
+    this.props.submitData(data);
+  },
+
   render: function () {
     var _this = this;
     return (
