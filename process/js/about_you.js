@@ -35,14 +35,24 @@ var AboutYou = React.createClass({
     if (this.isValidData(data)) {
       this.props.submitData(data);
     }
+    else {
+      console.log('Not numbers');
+    }
   },
 
   isValidData: function (data) {
-    return isNumerical(data);
+    values = Object.values(data);
+    values = values.slice(0, values.length - 1);
+    return this.isNumerical(values);
   },
 
-  isNumerical: function (data) {
-  }
+  isNumerical: function (values) {
+    return values.every(this.isNum);
+  },
+
+  isNum: function (val) {
+    return parseInt(val, 10);
+  },
 
 
   render: function () {

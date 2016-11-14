@@ -32,7 +32,6 @@ var UpDecisionAid = React.createClass({
   },//componentWillUnmount
 
   submitData: function (data) {
-    console.log(data);
     this.setState({
       user: {
         step1: data

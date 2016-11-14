@@ -16,6 +16,8 @@
     "lodash": "^4.13.1",
     "react": "^15.1.0",
     "react-dom": "^15.1.0",
-    "reactify": "^1.1.1"
+    "reactify": "^1.1.1",
+    "validator": "^6.1.0",
+    "react-validation": "^2.10.9"
   }
 }
