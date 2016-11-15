@@ -1,21 +1,16 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var AboutYou = require('./about_you');
+var AssessmentResults = require('./assessment_results');
 const ABOUT_DATA = './js/about_you_questions.json';
 
 var UpDecisionAid = React.createClass({
   getInitialState: function () {
     return {
-      step: 1,
+      currentStep: 0,
       data: [],
-      user: 
-      {
-        step1: null,
-        step2: null,
-        step3: null,
-        step4: null,
-        notes: null,
-      }
+      steps: [],
+      notes: null    
     };
   },
 
@@ -32,21 +27,33 @@ var UpDecisionAid = React.createClass({
   },//componentWillUnmount
 
   submitData: function (data) {
+    var steps = this.state.steps
+    var currStep = this.state.currentStep;
+    steps[currStep] = data
     this.setState({
       user: {
-        step1: data
+        steps: steps
       }
     });
   },
 
 
   render: function () {
-    return (
-      <AboutYou 
-        questionData={ this.state.data } 
-        submitData={ this.submitData }
-      />
-    );
+    switch (this.state.currentStep) {
+      case 0:
+        return (
+          <AboutYou 
+            questionData={ this.state.data } 
+            submitData={ this.submitData }
+          />
+        );
+      case 1:
+        return (
+          <AssessmentResults />
+        );
+      default:
+        return null;
+    }
   } //render
 }); // UpDecisionAid
 

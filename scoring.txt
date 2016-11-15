@@ -1,0 +1,17 @@
+Scoring
+
+Q1 >= 10 male partners = 2 pts
+Q2 Condomless: 3 pts only if >= 5 male partners from Q1 and yes to Q2
+Q3 HIV + partners: 3pts
+Q4 STDs: 2 pts
+
+
+Risk assessments stats
+
+Score       % Prevalent incident infection      HIV risk circles      PrEP protection circles
+0-2         1%                                  1                     0.5
+3-4         2%                                  2                     1.5
+5           4%                                  4                     3.5
+6-7         7%                                  7                     6
+8           11%                                 11                    10
+10          15%                                 15                    13.5
