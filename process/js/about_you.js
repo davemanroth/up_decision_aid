@@ -58,17 +58,20 @@ var AboutYou = React.createClass({
   render: function () {
     var _this = this;
     return (
-      <form className="questions" onSubmit={ this.handleSubmit }>
-        { this.props.questionData.map( function (entry, idx) {
-          return (
-            <div key={ idx } className="form-group">
-              <p>{ entry.question }</p>
-              { _this.getInputType(entry.type, entry.ref) }
-            </div>
-          );
-        })}
-        <button type="submit" className="btn btn-primary btn-lg">Calculate risk</button>
-      </form>
+      <div className="step1">
+        <h1>Step 1: About you</h1>
+        <form className="questions" onSubmit={ this.handleSubmit }>
+          { this.props.questionData.map( function (entry, idx) {
+            return (
+              <div key={ idx } className="form-group">
+                <p>{ entry.question }</p>
+                { _this.getInputType(entry.type, entry.ref) }
+              </div>
+            );
+          })}
+          <button type="submit" className="btn btn-primary btn-lg">Calculate risk</button>
+        </form>
+      </div>
     )
   }
 

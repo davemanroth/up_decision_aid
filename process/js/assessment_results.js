@@ -3,7 +3,7 @@ var React = require('react');
 var AssessmentResults = React.createClass({
   render: function () {
     return (
-      <h1>This is step 2</h1>
+      <h1>Step 2: Chances of getting HIV, with and without PrEP</h1>
     );
   }
 });
