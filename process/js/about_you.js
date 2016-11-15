@@ -28,16 +28,11 @@ var AboutYou = React.createClass({
     var data = {
       numPartners: this.refs.numPartners.value,
       withoutCondoms: this.refs.withoutCondoms.value,
-      hivParners: this.refs.hivPartners.value,
+      hivPartners: this.refs.hivPartners.value,
       stds: this.refs.stds.value,
     };
     e.preventDefault();
-    if (this.isValidData(data)) {
-      this.props.submitData(data);
-    }
-    else {
-      console.log('Not numbers');
-    }
+    this.props.submitData(data);
   },
 
   isValidData: function (data) {
