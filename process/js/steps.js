@@ -49,7 +49,9 @@ var Steps = React.createClass({
         );
       case 1:
         return (
-          <AssessmentResults />
+          <AssessmentResults 
+            responses={ this.state.steps[0] }
+          />
         );
       default:
         return null;
