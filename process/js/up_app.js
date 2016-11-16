@@ -1,11 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Steps = require('./steps');
+var Notes = require('./notes');
 
 var UpDecisionAid = React.createClass({
   getInitialState: function () {
     return {
-      currentStep: 0
+      currentStep: 0,
+      notes: null
     };
   },
 
@@ -21,10 +23,13 @@ var UpDecisionAid = React.createClass({
 
   render: function () {
     return (
-      <Steps 
-        currentStep={ this.state.currentStep }
-        updateStep= { this.updateStep }
-      />
+      <div className="up-decision-aid">
+        <Steps 
+          currentStep={ this.state.currentStep }
+          updateStep= { this.updateStep }
+        />
+        <Notes />
+      </div>
     );
   } //render
 }); // UpDecisionAid
