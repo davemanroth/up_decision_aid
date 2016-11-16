@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Steps = require('./steps');
 var Notes = require('./notes');
+var Arrow = require('./arrow');
 
 var UpDecisionAid = React.createClass({
   getInitialState: function () {
@@ -21,6 +22,11 @@ var UpDecisionAid = React.createClass({
     });
   },
 
+  handleArrowClick: function (target) {
+    console.log(target);
+  },
+  
+
   render: function () {
     return (
       <div className="up-decision-aid">
@@ -28,6 +34,18 @@ var UpDecisionAid = React.createClass({
           currentStep={ this.state.currentStep }
           updateStep= { this.updateStep }
         />
+        <div className="arrows clearfix">
+          <Arrow
+            direction="left"
+            text="Back"
+            onArrowClick={ this.handleArrowClick }
+          />
+          <Arrow
+            direction="right"
+            text="Next"
+            onArrowClick={ this.handleArrowClick }
+          />
+        </div>
         <Notes />
       </div>
     );

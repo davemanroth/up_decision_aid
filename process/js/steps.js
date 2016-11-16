@@ -23,7 +23,6 @@ var Steps = React.createClass({
     this.serverReqest.abort();
   },//componentWillUnmount
 
-
   updateStep: function (step) {
     this.props.updateStep(step);
   },
