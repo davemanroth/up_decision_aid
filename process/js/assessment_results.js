@@ -34,7 +34,50 @@ var AssessmentResults = React.createClass({
   },
 
   getResults: function (score) {
-    return null;
+    var results = {
+      prep: {
+        circles: 0
+      },
+      noPrep: {
+        circles: 0
+      }
+    };
+
+    if (score >= 0 && score < 3) {
+      results.noPrep.circles = 1;
+      results.prep.circles = 0.5;
+    }
+
+    else if (score >= 2 && score < 5) {
+      results.noPrep.circles = 2;
+      results.prep.circles = 1.5;
+    }
+
+    else if (score === 5) {
+      results.noPrep.circles = 4;
+      results.prep.circles = 3.5;
+    }
+
+    else if (score >= 6 && score < 8) {
+      results.noPrep.circles = 7;
+      results.prep.circles = 6;
+    }
+
+    else if (score === 8) {
+      results.noPrep.circles = 11;
+      results.prep.circles = 10;
+    }
+      
+    else if (score === 10) {
+      results.noPrep.circles = 15;
+      results.prep.circles = 13.5;
+    }
+    
+    else {
+      return null;
+    }
+      
+    return results;
   },
 
   componentWillMount: function () {
