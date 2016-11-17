@@ -1,29 +1,14 @@
 var React = require('react');
 var AboutYou = require('./about_you');
 var AssessmentResults = require('./assessment_results');
-const ABOUT_DATA = './js/about_you_questions.json';
+var YourValues = require('./your_values');
 
 var Steps = React.createClass({
   getInitialState: function () {
     return {
-      data: [],
       steps: []
     }
   },
-
-  componentDidMount: function () {
-    this.serverRequest = $.get(ABOUT_DATA, function (data) {
-      this.setState({
-        data: data,
-      })
-    }.bind(this));
-  },//componentDidMount
-
-  componentWillUnmount: function () {
-    this.serverReqest.abort();
-    if (this.props.initiateSubmit) {
-    }
-  },//componentWillUnmount
 
   updateStep: function (step) {
     this.props.updateStep(step);
@@ -45,7 +30,6 @@ var Steps = React.createClass({
         return (
           <AboutYou 
             currentStep={ this.props.currentStep }
-            questionData={ this.state.data } 
             submitData={ this.submitData }
           />
         );
@@ -53,6 +37,14 @@ var Steps = React.createClass({
         return (
           <AssessmentResults 
             responses={ this.state.steps[0] }
+            submitData={ this.submitData }
+          />
+        );
+      case 2:
+        return (
+          <YourValues 
+            responses={ this.state.steps[1] }
+            submitData={ this.submitData }
           />
         );
       default:

@@ -1,8 +1,9 @@
 var React = require('react');
 var Chart = require('./chart');
+var StepsMixin = require('./steps_mixin');
 
 var AssessmentResults = React.createClass({
-
+  mixins: [StepsMixin(false)],
   getInitialState: function () {
     return {
       score: 0,
@@ -86,6 +87,12 @@ var AssessmentResults = React.createClass({
     this.setState({
       score: score
     });
+  },
+
+  handleClickAction: function (e) {
+    var data = {
+    };
+    this.props.submitData(data);
   },
 
 

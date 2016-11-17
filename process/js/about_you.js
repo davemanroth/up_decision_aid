@@ -1,8 +1,15 @@
 var React = require('react');
-var ClickMixin = require('./click_mixin');
+var StepsMixin = require('./steps_mixin');
+const ABOUT_DATA = './js/about_you_questions.json';
 
 var AboutYou = React.createClass({
-  mixins: [ClickMixin],
+  mixins: [StepsMixin(ABOUT_DATA)],
+
+  getInitialState: function () {
+    return {
+      questionData: []
+    };
+  },
 
   getInputType: function (type, ref) {
     if( type === "radio") {
@@ -24,6 +31,15 @@ var AboutYou = React.createClass({
     return (
       <input type={ type } ref={ ref } className="form-control text-input" />
     );
+  },
+
+  storeData: function (data) {
+    if (!data) {
+      return;
+    }
+    this.setState({
+      questionData: data
+    });
   },
 
   handleClickAction: function (e) {
@@ -56,8 +72,8 @@ var AboutYou = React.createClass({
     return (
       <div className="step1">
         <h1>Step 1: About you</h1>
-        <form className="questions" onSubmit={ this.handleSubmit }>
-          { this.props.questionData.map( function (entry, idx) {
+        <form className="questions">
+          { this.state.questionData.map( function (entry, idx) {
             return (
               <div key={ idx } className="form-group">
                 <p>{ entry.question }</p>
@@ -65,7 +81,6 @@ var AboutYou = React.createClass({
               </div>
             );
           })}
-          <button type="submit" className="btn btn-primary btn-lg">Calculate risk</button>
         </form>
       </div>
     )

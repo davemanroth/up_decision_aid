@@ -1,0 +1,32 @@
+[
+  {
+    "question" : "Getting HIV is something I am:",
+    "left_limit" : "Very worried about",
+    "right_limit" : "Not worried about"
+  },
+
+  {
+    "question" : "I use condoms with anal sex:",
+    "left_limit" : "Rarely",
+    "right_limit" : "Always"
+  },
+
+  {
+    "question" : "Taking a pill everyday would be:",
+    "left_limit" : "Not at all hard to do",
+    "right_limit" : "Very hard to do"
+  },
+
+  {
+    "question" : "Having labs and visits with my healthcare provider every 3 months would be:",
+    "left_limit" : "Not at all hard to do",
+    "right_limit" : "Very hard to do"
+  },
+
+  {
+    "question" : "Having changes in how my kidneys work or bone thinning (that almost always return to normal after stopping PrEP) is something I am:",
+    "left_limit" : "Not worried about",
+    "right_limit" : "Very worried about"
+  }
+
+]
