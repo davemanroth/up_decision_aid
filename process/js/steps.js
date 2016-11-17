@@ -21,6 +21,9 @@ var Steps = React.createClass({
 
   componentWillUnmount: function () {
     this.serverReqest.abort();
+    if (this.props.initiateSubmit) {
+      console.log("Submit occurred");
+    }
   },//componentWillUnmount
 
   updateStep: function (step) {

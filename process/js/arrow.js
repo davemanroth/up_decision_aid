@@ -11,7 +11,7 @@ var Arrow = React.createClass({
     return (
       <div className= { "arrow pull-" + this.props.direction }>
         <button 
-          id= { "arrow-" + this.props.direction }
+          id= { this.props.name }
           role="button" 
           className={ this.props.direction }
           onClick={ this.handleClick }>

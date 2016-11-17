@@ -7,6 +7,7 @@ var Arrow = require('./arrow');
 var UpDecisionAid = React.createClass({
   getInitialState: function () {
     return {
+      initiateSubmit: false,
       currentStep: 0,
       notes: null
     };
@@ -23,7 +24,11 @@ var UpDecisionAid = React.createClass({
   },
 
   handleArrowClick: function (target) {
-    console.log(target);
+    if (target.id == "next" ) {
+      this.setState({
+        initiateSubmit: true
+      });
+    }
   },
   
 
@@ -31,6 +36,7 @@ var UpDecisionAid = React.createClass({
     return (
       <div className="up-decision-aid">
         <Steps 
+          initiateSubmit={ this.state.initiateSubmit }
           currentStep={ this.state.currentStep }
           updateStep= { this.updateStep }
         />
@@ -38,11 +44,13 @@ var UpDecisionAid = React.createClass({
           <Arrow
             direction="left"
             text="Back"
+            name="back"
             onArrowClick={ this.handleArrowClick }
           />
           <Arrow
             direction="right"
             text="Next"
+            name="next"
             onArrowClick={ this.handleArrowClick }
           />
         </div>
