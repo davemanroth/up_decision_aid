@@ -1,6 +1,8 @@
 var React = require('react');
+var ClickMixin = require('./click_mixin');
 
 var AboutYou = React.createClass({
+  mixins: [ClickMixin],
 
   getInputType: function (type, ref) {
     if( type === "radio") {
@@ -24,14 +26,13 @@ var AboutYou = React.createClass({
     );
   },
 
-  handleSubmit: function (e) {
+  handleClickAction: function (e) {
     var data = {
       numPartners: this.refs.numPartners.value,
       withoutCondoms: this.refs.withoutCondoms.value,
       hivPartners: this.refs.hivPartners.value,
       stds: this.refs.stds.value,
     };
-    e.preventDefault();
     this.props.submitData(data);
   },
 

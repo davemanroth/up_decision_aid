@@ -22,7 +22,6 @@ var Steps = React.createClass({
   componentWillUnmount: function () {
     this.serverReqest.abort();
     if (this.props.initiateSubmit) {
-      console.log("Submit occurred");
     }
   },//componentWillUnmount
 
@@ -45,6 +44,7 @@ var Steps = React.createClass({
       case 0:
         return (
           <AboutYou 
+            currentStep={ this.props.currentStep }
             questionData={ this.state.data } 
             submitData={ this.submitData }
           />

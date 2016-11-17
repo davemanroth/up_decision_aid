@@ -90,7 +90,6 @@ var AssessmentResults = React.createClass({
 
 
   render: function () {
-    console.log(this.state.score);
     return (
       <div className="step2">
         <h1>Step 2: Chances of getting HIV, with and without PrEP</h1>
