@@ -1,0 +1,10 @@
+{
+  "question" : "Select what you think you want to do next:",
+  "choices" : [
+    "I have decided to take/try PrEP",
+    "I have decided not to take/try PrEP",
+    "I need to talk about it with my friends/famil",
+    "I need to learn more about my options",
+    "Other, please specify"
+  ]
+}

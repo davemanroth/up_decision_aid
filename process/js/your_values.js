@@ -14,6 +14,7 @@ var YourValues = React.createClass({
   },
 
   handleClickAction: function (e) {
+    this.props.submitData(this.state.sliderValues);
   },
 
   setSliderValue: function (val, idx) {

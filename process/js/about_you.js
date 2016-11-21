@@ -17,12 +17,12 @@ var AboutYou = React.createClass({
         <div className="radios">
           <div className="radio">
             <label>
-              <input type={ type } ref={ ref } className="form-control" name={ ref } value="yes" /> Yes
+              <input type={ type } ref={ ref } name={ ref } value="yes" /> Yes
             </label>
           </div>
           <div className="radio">
             <label>
-              <input type={ type } ref={ ref } className="form-control" name={ ref } value="no" /> No
+              <input type={ type } ref={ ref } name={ ref } value="no" /> No
             </label>
           </div>
         </div>

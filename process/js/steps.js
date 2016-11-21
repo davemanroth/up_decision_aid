@@ -2,6 +2,7 @@ var React = require('react');
 var AboutYou = require('./about_you');
 var AssessmentResults = require('./assessment_results');
 var YourValues = require('./your_values');
+var NextSteps = require('./next_steps');
 
 var Steps = React.createClass({
   getInitialState: function () {
@@ -43,7 +44,12 @@ var Steps = React.createClass({
       case 2:
         return (
           <YourValues 
-            responses={ this.state.steps[1] }
+            submitData={ this.submitData }
+          />
+        );
+      case 3:
+        return (
+          <NextSteps 
             submitData={ this.submitData }
           />
         );

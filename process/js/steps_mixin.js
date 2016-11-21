@@ -20,6 +20,7 @@ function StepsMixin (path) {
         return;
       }
       this.handleClickAction(e);
+      e.preventDefault();
     },
   };
   return Mixin;
