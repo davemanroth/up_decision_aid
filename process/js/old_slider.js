@@ -20,4 +20,4 @@ var Slider = React.createClass({
   }
 });
 
-module.exports = Slider;
+//module.exports = Slider;
