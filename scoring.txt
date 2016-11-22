@@ -8,10 +8,10 @@ Q4 STDs: 2 pts
 
 Risk assessments stats
 
-Score       % Prevalent incident infection      HIV risk circles      PrEP protection circles
-0-2         1%                                  1                     0.5
-3-4         2%                                  2                     1.5
-5           4%                                  4                     3.5
+Score       % Prevalent incident infection      HIV risk circles      PrEP protection circles   PrEP text
+0-2         1%                                  1                     0.5                       0-1 men
+3-4         2%                                  2                     1.5                       1-2 men
+5           4%                                  4                     3.5                       3-4 men
 6-7         7%                                  7                     6
 8           11%                                 11                    10
-10          15%                                 15                    13.5
+10          15%                                 15                    13.5                      13-14 men
