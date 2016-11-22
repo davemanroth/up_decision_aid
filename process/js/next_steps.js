@@ -8,15 +8,22 @@ var NextSteps = React.createClass({
   getInitialState: function () {
     return {
       questionData: {},
-      response: null
+      response: null,
+      choice: null
     };
   },
 
   handleClickAction: function (e) {
-    var idx = this.refs.nextStep.value;
-    console.log(idx);
+    var idx = this.state.choice;
     var response = this.state.questionData.choices[idx];
     this.props.submitData(response);
+  },
+
+  handleRadio: function (e) {
+    var choice = e.target.value;
+    this.setState({
+      choice: choice
+    });
   },
 
   storeData: function (data) {
@@ -41,11 +48,11 @@ var NextSteps = React.createClass({
                 return (
                   <div key={ idx } className="radio">
                     <label>
-                      <input type="radio" ref="nextStep"  name="nextStep" value={ idx } /> { choice }
+                      <input onChange= { this.handleRadio } type="radio" name="nextStep" value={ idx } /> { choice }
                     </label>
                   </div>
                 );
-            })}
+            }.bind(this))}
           </div>
         </div>
       </div>

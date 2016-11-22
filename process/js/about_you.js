@@ -68,7 +68,6 @@ var AboutYou = React.createClass({
 
 
   render: function () {
-    var _this = this;
     return (
       <div className="step1">
         <h1>Step 1: About you</h1>
@@ -77,10 +76,10 @@ var AboutYou = React.createClass({
             return (
               <div key={ idx } className="form-group">
                 <p>{ entry.question }</p>
-                { _this.getInputType(entry.type, entry.ref) }
+                { this.getInputType(entry.type, entry.ref) }
               </div>
             );
-          })}
+          }.bind(this))}
         </form>
       </div>
     )

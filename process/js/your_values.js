@@ -35,7 +35,6 @@ var YourValues = React.createClass({
   },
 
   render: function () {
-    var _this = this;
     return (
       <div className="step3">
         <h1>Step 3: How PrEP fits with what matters most to you</h1>
@@ -48,10 +47,10 @@ var YourValues = React.createClass({
                 question={ entry.question }
                 leftLimit={ entry.left_limit}
                 rightLimit={ entry.right_limit }
-                setValue= { _this.setSliderValue }
+                setValue= { this.setSliderValue }
               />
             );
-          })}
+          }.bind(this))}
         </div>
       </div>
     );
