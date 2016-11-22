@@ -12,8 +12,11 @@ var NextSteps = React.createClass({
     };
   },
 
-  handClickAction: function (e) {
-    this.props.submitData(this.state.response);
+  handleClickAction: function (e) {
+    var idx = this.refs.nextStep.value;
+    console.log(idx);
+    var response = this.state.questionData.choices[idx];
+    this.props.submitData(response);
   },
 
   storeData: function (data) {
@@ -38,7 +41,7 @@ var NextSteps = React.createClass({
                 return (
                   <div key={ idx } className="radio">
                     <label>
-                      <input type="radio" ref={ idx } name={ idx } value={ idx } /> { choice }
+                      <input type="radio" ref="nextStep"  name="nextStep" value={ idx } /> { choice }
                     </label>
                   </div>
                 );
