@@ -7,7 +7,8 @@ var AboutYou = React.createClass({
 
   getInitialState: function () {
     return {
-      questionData: []
+      questionData: [],
+      stds: null
     };
   },
 
@@ -17,12 +18,12 @@ var AboutYou = React.createClass({
         <div className="radios">
           <div className="radio">
             <label>
-              <input type={ type } ref={ ref } name={ ref } value="yes" /> Yes
+              <input onChange= { this.handleRadios } type={ type } name={ ref } value="yes" /> Yes
             </label>
           </div>
           <div className="radio">
             <label>
-              <input type={ type } ref={ ref } name={ ref } value="no" /> No
+              <input onChange= { this.handleRadios } type={ type } name={ ref } value="no" /> No
             </label>
           </div>
         </div>
@@ -31,6 +32,13 @@ var AboutYou = React.createClass({
     return (
       <input type={ type } ref={ ref } className="form-control text-input" />
     );
+  },
+
+  handleRadios: function (e) {
+    var choice = e.target.value;
+    this.setState({
+      stds: choice
+    });
   },
 
   storeData: function (data) {
@@ -47,7 +55,7 @@ var AboutYou = React.createClass({
       numPartners: this.refs.numPartners.value,
       withoutCondoms: this.refs.withoutCondoms.value,
       hivPartners: this.refs.hivPartners.value,
-      stds: this.refs.stds.value,
+      stds: this.state.stds
     };
     this.props.submitData(data);
   },
