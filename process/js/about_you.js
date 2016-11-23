@@ -8,36 +8,51 @@ var AboutYou = React.createClass({
   getInitialState: function () {
     return {
       questionData: [],
-      stds: null
+      stds: []
     };
   },
 
-  getInputType: function (type, ref) {
-    if( type === "radio") {
+  getRadioChoices: function(choices) {
+    var rendered = [];
+    choices.map( function(choice, idx) {
+      rendered.push(
+        <div key= { idx }>
+          <label className="radio-inline">
+            <span>{ choice }</span>
+          </label>
+          <label className="radio-inline">
+            <input onChange= { this.handleRadios } type="radio" name={ idx } value="yes" /> Yes
+          </label>
+          <label className="radio-inline">
+            <input onChange= { this.handleRadios } type="radio" name={ idx } value="no" /> No
+          </label>
+        </div>
+      );
+    }.bind(this));
+    return rendered;
+  },
+
+  getInputType: function (entry) {
+    if( entry.type === "radio") {
+      var radios = this.getRadioChoices(entry.choices);
       return (
         <div className="radios">
-          <div className="radio">
-            <label>
-              <input onChange= { this.handleRadios } type={ type } name={ ref } value="yes" /> Yes
-            </label>
-          </div>
-          <div className="radio">
-            <label>
-              <input onChange= { this.handleRadios } type={ type } name={ ref } value="no" /> No
-            </label>
-          </div>
+          { radios }
         </div>
       );
     }
     return (
-      <input type={ type } ref={ ref } className="form-control text-input" />
+      <input type={ entry.type } ref={ entry.ref } className="form-control text-input" />
     );
   },
 
   handleRadios: function (e) {
+    var stds = this.state.stds;
+    var idx = e.target.name;
     var choice = e.target.value;
+    stds[idx] = choice;
     this.setState({
-      stds: choice
+      stds: stds
     });
   },
 
@@ -83,8 +98,8 @@ var AboutYou = React.createClass({
           { this.state.questionData.map( function (entry, idx) {
             return (
               <div key={ idx } className="form-group">
-                <p>{ entry.question }</p>
-                { this.getInputType(entry.type, entry.ref) }
+                <p dangerouslySetInnerHTML={ { __html: entry.question } } />
+                { this.getInputType(entry) }
               </div>
             );
           }.bind(this))}

@@ -1,6 +1,6 @@
 [
     {
-      "question" : "How many male sexual partners have you had?",
+      "question" : "<strong>In the last year,</strong> how many men have you had sex with? Fill in your answer (must be a number):",
       "type" : "text",
       "ref" : "numPartners",
       "threshold" : "10",
@@ -8,7 +8,7 @@
     },
 
     {
-      "question" : "With how many partners have you had anal sex without condoms when you were the bottom (i.e. condomless receptive anal sex)?",
+      "question" : "<strong>In the last year,</strong> with how many men have you had anal sex without condoms when you were the bottom (condomless receptive anal sex)? Fill in your answer (must be a number):",
       "type" : "text",
       "ref" : "withoutCondoms",
       "threshold" : "true",
@@ -23,7 +23,7 @@
     },
 
     {
-      "question" : "With how many HIV-positive partners have you had anal sex without condoms when you were the bottom (i.e. condomless receptive anal sex)?",
+      "question" : "<strong>In the last year,</strong> with how many HIV-positive men have you had anal sex without condoms when you were the bottom (condomless receptive anal sex)? Fill in your answer (must be a number):",
       "type" : "text",
       "ref" : "hivPartners",
       "threshold" : "true",
@@ -31,9 +31,13 @@
     },
 
     {
-      "question" : "Have you been diagnosed with gonorrhea, chlamydia, or syphilis?",
+      "question" : "<strong>In the last year,</strong> have you been diagnosed with:",
       "type" : "radio",
-      "ref" : "stds",
+      "choices" : [
+        "Gonorrhea",
+        "Chlamydia",
+        "Syphilis"
+      ],
       "threshold" : "true",
       "points" : "2"
     }
