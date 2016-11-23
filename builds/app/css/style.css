@@ -4,7 +4,18 @@
   width: 20px;
   height: 20px;
   display: inline-block;
-  border: #333 1px solid;
-  border-radius: 50%;
   margin: 3px 5px;
+  border-radius: 50%;
+}
+
+.border {
+  border: #000 1px solid;
+}
+
+.filled {
+  background: #444;
+}
+
+.chart-circle.half-circle {
+  border-radius: 50% 0 0 50%;
 }

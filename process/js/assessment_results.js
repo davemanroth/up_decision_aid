@@ -26,11 +26,6 @@ var AssessmentResults = React.createClass({
     if (responses.hivPartners > 0) {
       score += 3;
     }
-    
-    if (responses.stds === "yes") {
-      score += 2;
-    }
-
     return score;
   },
 
@@ -97,7 +92,7 @@ var AssessmentResults = React.createClass({
 
   componentWillMount: function () {
     var score = this.getScore();
-    var results = this.getResults();
+    var results = this.getResults(score);
     this.setState({
       score: score,
       results: results
@@ -112,17 +107,18 @@ var AssessmentResults = React.createClass({
 
 
   render: function () {
+    if (!this.state.results) { return null; }
     return (
       <div className="step2">
         <h1>Step 2: Chances of getting HIV, with and without PrEP</h1>
         <div className="row">
           <div className="col-md-6">
             <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>
-            <Chart circles="" />
+            <Chart circles= { this.state.results.noPrep.circles } />
           </div>
           <div className="col-md-6">
             <p>If 100 men who answered like you <strong>are taking PrEP</strong></p>
-            <Chart circles="" />
+            <Chart circles= { this.state.results.prep.circles } />
           </div>
         </div>
       </div>
