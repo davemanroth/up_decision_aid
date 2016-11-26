@@ -7,14 +7,13 @@ var Chart = React.createClass({
 
   },
 
-  classesIterator: function () {
-    var circles = this.props.circles;
+  classesIterator: function (circles) {
     return Number.isInteger(circles) ? circles : Math.ceil(circles);
   },
 
-  generateExtraClass: function (count) {
+  generateExtraClass: function (count, circles) {
     var extraClass = "";
-    if( !Number.isInteger(this.props.circles) && count == 1 ) {
+    if( !Number.isInteger(circles) && count == 1 ) {
       extraClass = " filled half-circle";
     }
     else {
@@ -25,13 +24,14 @@ var Chart = React.createClass({
 
   renderCircles: function () {
     var chart = [];
-    var count = this.classesIterator();
+    var circles = this.props.circles;
+    var count = this.classesIterator(circles);
     var extraClass = "";
     for (var i = 0; i < COLS; i++) {
       var col = [];
       for (var j = 0; j < COLS; j++) {
         if (count > 0) {
-          extraClass = this.generateExtraClass(count); 
+          extraClass = this.generateExtraClass(count, circles); 
           count--;
         }
         else {

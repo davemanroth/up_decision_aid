@@ -3,6 +3,7 @@ var AboutYou = require('./about_you');
 var AssessmentResults = require('./assessment_results');
 var YourValues = require('./your_values');
 var NextSteps = require('./next_steps');
+var SummaryReport = require('./summary_report');
 
 var Steps = React.createClass({
   getInitialState: function () {
@@ -51,6 +52,12 @@ var Steps = React.createClass({
         return (
           <NextSteps 
             submitData={ this.submitData }
+          />
+        );
+      case 4:
+        return (
+          <SummaryReport 
+            stepsData= { this.state.steps }
           />
         );
       default:
