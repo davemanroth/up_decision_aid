@@ -30,10 +30,10 @@ var AboutYou = React.createClass({
             <span>{ choice }</span>
           </label>
           <label className="radio-inline">
-            <input onChange= { this.handleRadios } type="radio" name={ idx } value="yes" /> Yes
+            <input onChange= { this.handleRadios } type="radio" name={ idx } value="yes" checked={ this.state.stds[idx] === "yes" } /> Yes
           </label>
           <label className="radio-inline">
-            <input onChange= { this.handleRadios } type="radio" name={ idx } value="no" /> No
+            <input onChange= { this.handleRadios } type="radio" name={ idx } value="no" checked={ this.state.stds[idx] === "no" } /> No
           </label>
         </div>
       );
@@ -42,7 +42,6 @@ var AboutYou = React.createClass({
   },
 
   handleChange: function (e) {
-    console.log(e.target);
     var data = this.state.data;
     data[e.target.id] = e.target.value;
     this.setState({
