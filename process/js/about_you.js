@@ -16,7 +16,8 @@ var AboutYou = React.createClass({
   componentWillMount: function () {
     if (this.props.data) {
       this.setState({
-        data: this.props.data
+        data: this.props.data,
+        stds: this.props.data.stds
       });
     }
   },

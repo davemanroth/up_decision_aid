@@ -26,6 +26,11 @@ var AssessmentResults = React.createClass({
     if (responses.hivPartners > 0) {
       score += 3;
     }
+
+    if ( responses.stds.includes("yes") ) {
+      score += 2;
+    }
+
     return score;
   },
 

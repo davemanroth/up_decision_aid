@@ -18,8 +18,8 @@ function StepsMixin (path) {
     handleClick: function (e) {
       if (e.target.id === "next" || e.target.id === "back") {
         this.handleClickAction(e.target.id);
+        e.preventDefault();
       }
-      e.preventDefault();
     },
   };
   return Mixin;
