@@ -101,7 +101,7 @@ var AssessmentResults = React.createClass({
 
   handleClickAction: function (id) {
     if (id === "back") {
-      this.props.backStep;
+      this.props.backStep();
     }
     else {
       var data = {

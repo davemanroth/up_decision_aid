@@ -8,8 +8,24 @@ var AboutYou = React.createClass({
   getInitialState: function () {
     return {
       questionData: [],
-      stds: []
+      stds: [],
+      data: {},
+      names: {}
     };
+  },
+
+  componentDidMount: function () {
+    if (this.props.data) {
+      var keys = Object.keys(this.props.data);
+      var names = this.state.names;
+      keys.map( function (key) {
+        names[key] = key;
+      });
+      this.setState({
+        data: this.props.data,
+        names: names
+      });
+    }
   },
 
   getRadioChoices: function(choices) {
@@ -32,6 +48,10 @@ var AboutYou = React.createClass({
     return rendered;
   },
 
+  getKeyName: function (entry) {
+    return this.state.names[entry.ref];
+  },
+
   getInputType: function (entry) {
     if( entry.type === "radio") {
       var radios = this.getRadioChoices(entry.choices);
@@ -41,10 +61,26 @@ var AboutYou = React.createClass({
         </div>
       );
     }
-    return (
-      <input type={ entry.type } ref={ entry.ref } className="form-control text-input" />
-    );
+    if (this.state.names.length > 0) {
+      return (
+        <input type={ entry.type } name={ this.state.names[entry.ref] } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
+      );
+    }
   },
+
+  handleChange: function (e) {
+    console.log(e.target);
+    var data = this.state.data;
+    data[e.target.name] = e.target.value;
+    this.setState({
+      data: data
+    });
+  },
+
+  handleValue: function (ref) {
+    var data = this.props.data;
+    return data ? data[ref] : "";
+  }, 
 
   handleRadios: function (e) {
     var stds = this.state.stds;
@@ -99,7 +135,9 @@ var AboutYou = React.createClass({
             return (
               <div key={ idx } className="form-group">
                 <p dangerouslySetInnerHTML={ { __html: entry.question } } />
-                { this.getInputType(entry) }
+                { 
+                  this.getInputType(entry) 
+                }
               </div>
             );
           }.bind(this))}

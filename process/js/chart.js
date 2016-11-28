@@ -46,7 +46,6 @@ var Chart = React.createClass({
   },
 
   render: function () {
-    console.log(this.props.circles);
     var chart = this.renderCircles();
     return (
       <div className="prep-chart">
