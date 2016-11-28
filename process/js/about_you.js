@@ -9,21 +9,14 @@ var AboutYou = React.createClass({
     return {
       questionData: [],
       stds: [],
-      data: {},
-      names: {}
+      data: {}
     };
   },
 
-  componentDidMount: function () {
+  componentWillMount: function () {
     if (this.props.data) {
-      var keys = Object.keys(this.props.data);
-      var names = this.state.names;
-      keys.map( function (key) {
-        names[key] = key;
-      });
       this.setState({
-        data: this.props.data,
-        names: names
+        data: this.props.data
       });
     }
   },
@@ -48,39 +41,14 @@ var AboutYou = React.createClass({
     return rendered;
   },
 
-  getKeyName: function (entry) {
-    return this.state.names[entry.ref];
-  },
-
-  getInputType: function (entry) {
-    if( entry.type === "radio") {
-      var radios = this.getRadioChoices(entry.choices);
-      return (
-        <div className="radios">
-          { radios }
-        </div>
-      );
-    }
-    if (this.state.names.length > 0) {
-      return (
-        <input type={ entry.type } name={ this.state.names[entry.ref] } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
-      );
-    }
-  },
-
   handleChange: function (e) {
     console.log(e.target);
     var data = this.state.data;
-    data[e.target.name] = e.target.value;
+    data[e.target.id] = e.target.value;
     this.setState({
       data: data
     });
   },
-
-  handleValue: function (ref) {
-    var data = this.props.data;
-    return data ? data[ref] : "";
-  }, 
 
   handleRadios: function (e) {
     var stds = this.state.stds;
@@ -132,12 +100,19 @@ var AboutYou = React.createClass({
         <h1>Step 1: About you</h1>
         <form className="questions">
           { this.state.questionData.map( function (entry, idx) {
+            if (entry.type === "radio") {
+              var radios = this.getRadioChoices(entry.choices);
+              return (
+                <div key={ idx } className="radios">
+                  { radios }
+                </div>
+              );
+            }
             return (
               <div key={ idx } className="form-group">
                 <p dangerouslySetInnerHTML={ { __html: entry.question } } />
-                { 
-                  this.getInputType(entry) 
-                }
+                <input type={ entry.type } id= { entry.ref } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
+                  {/*this.getInputType(entry) */}
               </div>
             );
           }.bind(this))}
