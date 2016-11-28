@@ -109,9 +109,7 @@ var AssessmentResults = React.createClass({
       this.props.backStep();
     }
     else {
-      var data = {
-      };
-      this.props.submitData(data);
+      this.props.submitData(this.state.results);
     }
   },
 

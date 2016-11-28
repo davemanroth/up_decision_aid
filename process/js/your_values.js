@@ -38,19 +38,23 @@ var YourValues = React.createClass({
     return (
       <div className="step3">
         <h1>Step 3: How PrEP fits with what matters most to you</h1>
-        <div className="questions">
-          { this.state.questionData.map( function (entry, idx) {
-            return (
-              <SliderQuestion
-                key={ idx }
-                iteration= { idx }
-                question={ entry.question }
-                leftLimit={ entry.left_limit}
-                rightLimit={ entry.right_limit }
-                setValue= { this.setSliderValue }
-              />
-            );
-          }.bind(this))}
+        <div className="row">
+          <div className="col-md-8 col-md-push-2">
+            <div className="questions">
+              { this.state.questionData.map( function (entry, idx) {
+                return (
+                  <SliderQuestion
+                    key={ idx }
+                    iteration= { idx }
+                    question={ entry.question }
+                    leftLimit={ entry.left_limit}
+                    rightLimit={ entry.right_limit }
+                    setValue= { this.setSliderValue }
+                  />
+                );
+              }.bind(this))}
+            </div>
+          </div>
         </div>
       </div>
     );
