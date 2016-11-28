@@ -99,10 +99,15 @@ var AssessmentResults = React.createClass({
     });
   },
 
-  handleClickAction: function (e) {
-    var data = {
-    };
-    this.props.submitData(data);
+  handleClickAction: function (id) {
+    if (id === "back") {
+      this.props.backStep;
+    }
+    else {
+      var data = {
+      };
+      this.props.submitData(data);
+    }
   },
 
 

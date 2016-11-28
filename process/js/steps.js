@@ -12,6 +12,10 @@ var Steps = React.createClass({
     }
   },
 
+  backStep: function () {
+    this.updateStep(-1);
+  },
+
   updateStep: function (step) {
     this.props.updateStep(step);
   },
@@ -33,6 +37,7 @@ var Steps = React.createClass({
           <AboutYou 
             currentStep={ this.props.currentStep }
             submitData={ this.submitData }
+            data = { this.state.steps[0] }
           />
         );
       case 1:
@@ -40,6 +45,7 @@ var Steps = React.createClass({
           <AssessmentResults 
             responses={ this.state.steps[0] }
             submitData={ this.submitData }
+            backStep = { this.backStep }
           />
         );
       case 2:

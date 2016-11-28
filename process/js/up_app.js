@@ -33,6 +33,16 @@ var UpDecisionAid = React.createClass({
   
 
   render: function () {
+    var backArrow = "";
+    if (this.state.currentStep === 1) {
+      backArrow = 
+        <Arrow
+          direction="left"
+          text="Back"
+          name="back"
+          onArrowClick={ this.handleArrowClick }
+        />
+    }
     return (
       <div className="up-decision-aid">
         <Steps 
@@ -41,12 +51,7 @@ var UpDecisionAid = React.createClass({
           updateStep= { this.updateStep }
         />
         <div className="arrows clearfix">
-          <Arrow
-            direction="left"
-            text="Back"
-            name="back"
-            onArrowClick={ this.handleArrowClick }
-          />
+          { backArrow }
           <Arrow
             direction="right"
             text="Next"

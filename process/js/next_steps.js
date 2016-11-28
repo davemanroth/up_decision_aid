@@ -13,7 +13,7 @@ var NextSteps = React.createClass({
     };
   },
 
-  handleClickAction: function (e) {
+  handleClickAction: function (id) {
     var idx = this.state.choice;
     var response = this.state.questionData.choices[idx];
     this.props.submitData(response);

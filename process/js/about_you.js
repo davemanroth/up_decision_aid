@@ -65,7 +65,7 @@ var AboutYou = React.createClass({
     });
   },
 
-  handleClickAction: function (e) {
+  handleClickAction: function (id) {
     var data = {
       numPartners: this.refs.numPartners.value,
       withoutCondoms: this.refs.withoutCondoms.value,

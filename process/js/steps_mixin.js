@@ -16,10 +16,9 @@ function StepsMixin (path) {
     },
 
     handleClick: function (e) {
-      if (e.target.id !== "next") {
-        return;
+      if (e.target.id === "next" || e.target.id === "back") {
+        this.handleClickAction(e.target.id);
       }
-      this.handleClickAction(e);
       e.preventDefault();
     },
   };
