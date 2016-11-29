@@ -112,7 +112,6 @@ var AboutYou = React.createClass({
               <div key={ idx } className="form-group">
                 <p dangerouslySetInnerHTML={ { __html: entry.question } } />
                 <input type={ entry.type } id= { entry.ref } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
-                  {/*this.getInputType(entry) */}
               </div>
             );
           }.bind(this))}
