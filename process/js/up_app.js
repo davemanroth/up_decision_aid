@@ -22,30 +22,31 @@ var UpDecisionAid = React.createClass({
     });
   },
 
+  renderArrows: function (currStep) {
+    var backArrow = <Arrow direction="left" text="Back" name="back" key= { 0 }/>;
+    var nextArrow = <Arrow direction="right" text="Next" name="next" key= { 1 }/>;
+    if (currStep === 1) {
+      return [backArrow, nextArrow];
+    }
+    else if( currStep === 4) {
+      return null;
+    }
+    else {
+      return nextArrow;
+    }
+  },
+
   render: function () {
     var backArrow = "";
-    if (this.state.currentStep === 1) {
-      backArrow = 
-        <Arrow
-          direction="left"
-          text="Back"
-          name="back"
-        />
-    }
+
     return (
       <div className="up-decision-aid">
         <Steps 
-          initiateSubmit={ this.state.initiateSubmit }
           currentStep={ this.state.currentStep }
           updateStep= { this.updateStep }
         />
         <div className="arrows clearfix">
-          { backArrow }
-          <Arrow
-            direction="right"
-            text="Next"
-            name="next"
-          />
+          { this.renderArrows(this.state.currentStep) }
         </div>
         <Notes />
       </div>

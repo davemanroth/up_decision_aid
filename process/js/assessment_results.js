@@ -119,7 +119,7 @@ var AssessmentResults = React.createClass({
     if (!this.state.results) { return null; }
     return (
       <div className="step2">
-        <h1>Step 2: Chances of getting HIV, with and without PrEP</h1>
+        <h1>{ this.props.title }</h1>
         <div className="row">
           <div className="col-md-6">
             <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>

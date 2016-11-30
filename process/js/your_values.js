@@ -38,7 +38,7 @@ var YourValues = React.createClass({
   render: function () {
     return (
       <div className="step3">
-        <h1>Step 3: How PrEP fits with what matters most to you</h1>
+        <h1>{ this.props.title }</h1>
         <div className="row">
           <div className="col-md-8 col-md-push-2">
             <div className="questions">

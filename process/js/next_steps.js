@@ -41,7 +41,7 @@ var NextSteps = React.createClass({
     if(!choices) { return null; }
     return (
       <div className="step4">
-        <h1>Step 4: Your next steps</h1>
+        <h1>{ this.props.title }"</h1>
         <div className="questions">
           <p>{ this.state.questionData.question }</p>
           <div className="radios">

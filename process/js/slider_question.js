@@ -10,14 +10,20 @@ var SliderQuestion = React.createClass({
   },
 
   componentDidMount: function () {
-    //console.log(Slider);
+    if (this.props.storedValue) {
+      this.setState({
+        value: this.props.storedValue
+      });
+    }
   },
 
   handleChange: function (value) {
     this.setState({
       value: value
     });
-    this.props.setValue(value, this.props.iteration);
+    if (this.props.setValue) {
+      this.props.setValue(value, this.props.iteration);
+    }
   },
 
   render: function () {
@@ -34,8 +40,10 @@ var SliderQuestion = React.createClass({
         </div>
         <Slider
           max= {10}
+          dots= { true }
           value= { this.state.value }
           onChange= { this.handleChange }
+          disabled= { this.props.disabled }
         />
       </div>
     );

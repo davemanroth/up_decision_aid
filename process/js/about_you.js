@@ -98,7 +98,7 @@ var AboutYou = React.createClass({
   render: function () {
     return (
       <div className="step1">
-        <h1>Step 1: About you</h1>
+        <h1>{ this.props.title }</h1>
         <form className="questions">
           { this.state.questionData.map( function (entry, idx) {
             if (entry.type === "radio") {
