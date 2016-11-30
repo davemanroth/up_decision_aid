@@ -32,6 +32,7 @@ var YourValues = React.createClass({
     this.setState({
       questionData: data
     });
+    this.props.storeQuestions(data);
   },
 
   render: function () {

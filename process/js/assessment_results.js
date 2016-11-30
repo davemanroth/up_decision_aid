@@ -102,6 +102,7 @@ var AssessmentResults = React.createClass({
       score: score,
       results: results
     });
+    this.props.storeQuestions("");
   },
 
   handleClickAction: function (id) {

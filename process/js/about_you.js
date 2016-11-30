@@ -67,6 +67,7 @@ var AboutYou = React.createClass({
     this.setState({
       questionData: data
     });
+    this.props.storeQuestions(data);
   },
 
   handleClickAction: function (id) {
@@ -79,12 +80,12 @@ var AboutYou = React.createClass({
     this.props.submitData(data);
   },
 
+/*
   isValidData: function (data) {
     values = Object.values(data);
     values = values.slice(0, values.length - 1);
     return this.isNumerical(values);
   },
-
   isNumerical: function (values) {
     return values.every(this.isNum);
   },
@@ -92,7 +93,7 @@ var AboutYou = React.createClass({
   isNum: function (val) {
     return parseInt(val, 10);
   },
-
+*/
 
   render: function () {
     return (

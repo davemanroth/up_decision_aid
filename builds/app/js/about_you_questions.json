@@ -2,32 +2,19 @@
     {
       "question" : "<strong>In the last year,</strong> how many men have you had sex with? Fill in your answer (must be a number):",
       "type" : "text",
-      "ref" : "numPartners",
-      "threshold" : "10",
-      "points" : "2"
+      "ref" : "numPartners"
     },
 
     {
       "question" : "<strong>In the last year,</strong> with how many men have you had anal sex without condoms when you were the bottom (condomless receptive anal sex)? Fill in your answer (must be a number):",
       "type" : "text",
-      "ref" : "withoutCondoms",
-      "threshold" : "true",
-      "points" : "3",
-      "dependency" : 
-
-      {
-        "question" : "0",
-        "threshold" : "5"
-      }
-
+      "ref" : "withoutCondoms"
     },
 
     {
       "question" : "<strong>In the last year,</strong> with how many HIV-positive men have you had anal sex without condoms when you were the bottom (condomless receptive anal sex)? Fill in your answer (must be a number):",
       "type" : "text",
-      "ref" : "hivPartners",
-      "threshold" : "true",
-      "points" : "3"
+      "ref" : "hivPartners"
     },
 
     {
@@ -37,8 +24,6 @@
         "Gonorrhea",
         "Chlamydia",
         "Syphilis"
-      ],
-      "threshold" : "true",
-      "points" : "2"
+      ]
     }
 ]

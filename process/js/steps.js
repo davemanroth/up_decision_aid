@@ -8,6 +8,7 @@ var SummaryReport = require('./summary_report');
 var Steps = React.createClass({
   getInitialState: function () {
     return {
+      questions: [],
       steps: []
     }
   },
@@ -18,6 +19,14 @@ var Steps = React.createClass({
 
   updateStep: function (step) {
     this.props.updateStep(step);
+  },
+
+  storeQuestions: function (toAdd) {
+    var questions = this.state.questions;
+    questions.push(toAdd);
+    this.setState({
+      questions: questions
+    });
   },
 
   submitData: function (data) {
@@ -38,6 +47,7 @@ var Steps = React.createClass({
             currentStep={ this.props.currentStep }
             submitData={ this.submitData }
             data = { this.state.steps[0] }
+            storeQuestions= { this.storeQuestions }
           />
         );
       case 1:
@@ -46,18 +56,21 @@ var Steps = React.createClass({
             responses={ this.state.steps[0] }
             submitData={ this.submitData }
             backStep = { this.backStep }
+            storeQuestions= { this.storeQuestions }
           />
         );
       case 2:
         return (
           <YourValues 
             submitData={ this.submitData }
+            storeQuestions= { this.storeQuestions }
           />
         );
       case 3:
         return (
           <NextSteps 
             submitData={ this.submitData }
+            storeQuestions= { this.storeQuestions }
           />
         );
       case 4:
