@@ -137,7 +137,17 @@ var SummaryReport = React.createClass({
             </div>
           );
         }.bind(this))}
-        <Arrow name="restart" direction="right" text="Restart" />
+        <div className="col-md-6 col-md-push-3">
+          <div className="col-md-4">
+            <Arrow direction="left" name="print_report" text="Print this report" />
+          </div>
+          <div className="col-md-4">
+            <Arrow direction="left" name="download_report" text="Download this report" />
+          </div>
+          <div className="col-md-4">
+            <Arrow direction="right" name="restart" text="Restart" />
+          </div>
+        </div>
       </div>
     );
   }
