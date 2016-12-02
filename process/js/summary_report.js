@@ -67,33 +67,43 @@ var SummaryReport = React.createClass({
     );
   },
 
-  stepRenderer: function (step, results, entry, idx) {
-    switch (step) {
-      case 0:
-        return this.step1render(step, results, entry, idx);
-      case 2:
-        return this.step3render(step, results, entry, idx);
-      default:
-        return null;
-    }
-  },
-
   renderStep: function (step) {
     var questions = this.props.questionsData[step];
     var results = this.props.stepsData[step];
-    if (step === 1) {
-      return this.step2render(step, results);
+    switch (step) {
+      // Step 1: About you
+      case 0:
+        return (
+          <div>
+            { questions.map( function (entry, idx) {
+              return this.step1render(step, results, entry, idx);
+            }.bind(this))}
+          </div>
+        );
+
+      //Step 2: Chances of getting HIV
+      case 1:
+        return this.step2render(step, results);
+
+      //Step 3: How PrEP fits with what matters to you
+      case 2:
+        return (
+          <div className="row">
+            <div className="col-md-8 col-md-push-2">
+              { questions.map( function (entry, idx) {
+                return this.step3render(step, results, entry, idx);
+              }.bind(this))}
+            </div>
+          </div>
+        );
+
+      // Your next steps
+      case 3:
+        return this.step4render(step, results, questions.question);
+
+      default:
+        return null;
     }
-    else if (step === 3) {
-      return this.step4render(step, results, questions.question);
-    }
-    return (
-      <div>
-        { questions.map( function (entry, idx) {
-          return this.stepRenderer(step, results, entry, idx);
-        }.bind(this))}
-      </div>
-    );
   },
           
   render: function () {
