@@ -1,4 +1,5 @@
 var React = require('react');
+var Arrow = require('./arrow');
 var Chart = require('./chart');
 var SliderQuestion = require('./slider_question');
 var StepsMixin = require('./steps_mixin');
@@ -20,7 +21,24 @@ var SummaryReport = React.createClass({
   },
 
   step1render: function (step, results, entry, idx) {
-    var question = entry.question.split("?").shift() + "?";
+    var question = entry.question.split("?").shift();
+    if (entry.choices) {
+      return (
+        <div key= { idx }>
+          <p dangerouslySetInnerHTML= { { __html: question } } />
+          <ul>
+            { entry.choices.map( function (choice, idy) {
+              return (
+                <li key= { idy }>
+                  { choice }: { results.stds[idy] }
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      );
+    }
+    question = question + "?";
     return (
       <div key= { idx }>
         <p dangerouslySetInnerHTML= { { __html: question } } />
@@ -99,7 +117,7 @@ var SummaryReport = React.createClass({
 
       // Your next steps
       case 3:
-        return this.step4render(step, results, questions.question);
+        return this.step4render(step, results, questions[0].question);
 
       default:
         return null;
@@ -119,6 +137,7 @@ var SummaryReport = React.createClass({
             </div>
           );
         }.bind(this))}
+        <Arrow name="restart" direction="right" text="Restart" />
       </div>
     );
   }
