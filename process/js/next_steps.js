@@ -7,7 +7,7 @@ var NextSteps = React.createClass({
 
   getInitialState: function () {
     return {
-      questionData: {},
+      questionData: [],
       response: null,
       choice: null
     };
@@ -15,7 +15,7 @@ var NextSteps = React.createClass({
 
   handleClickAction: function (id) {
     var idx = this.state.choice;
-    var response = this.state.questionData.choices[idx];
+    var response = this.state.questionData[0].choices[idx];
     this.props.submitData(response);
   },
 
@@ -37,13 +37,13 @@ var NextSteps = React.createClass({
   },
 
   render: function () {
-    var choices = this.state.questionData.choices;
-    if(!choices) { return null; }
+    if (!this.state.questionData[0]) { return null; }
+    var choices = this.state.questionData[0].choices;
     return (
       <div className="step4">
-        <h1>{ this.props.title }"</h1>
+        <h1>{ this.props.title }</h1>
         <div className="questions">
-          <p>{ this.state.questionData.question }</p>
+          <p>{ this.state.questionData[0].question }</p>
           <div className="radios">
             { choices.map( function (choice, idx) {
                 return (
