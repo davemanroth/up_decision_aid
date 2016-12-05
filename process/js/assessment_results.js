@@ -51,6 +51,7 @@ var AssessmentResults = React.createClass({
       results.prep.circles = 0.5;
       results.noPrep.numMen = 1;
       results.prep.numMen = "0-1";
+      results.prep.hivNeg = "99-100";
     }
 
     else if (score >= 2 && score < 5) {
@@ -58,6 +59,7 @@ var AssessmentResults = React.createClass({
       results.prep.circles = 1.5;
       results.noPrep.numMen = 2;
       results.prep.numMen = "1-2";
+      results.prep.hivNeg = "98-99";
     }
 
     else if (score === 5) {
@@ -65,6 +67,7 @@ var AssessmentResults = React.createClass({
       results.prep.circles = 3.5;
       results.noPrep.numMen = 4;
       results.prep.numMen = "3-4";
+      results.prep.hivNeg = "96-97";
     }
 
     else if (score >= 6 && score < 8) {
@@ -86,6 +89,7 @@ var AssessmentResults = React.createClass({
       results.prep.circles = 13.5;
       results.noPrep.numMen = 15;
       results.prep.numMen = "13-14";
+      results.prep.hivNeg = "86-87";
     }
     
     else {
@@ -114,28 +118,28 @@ var AssessmentResults = React.createClass({
     }
   },
 
-
   render: function () {
     if (!this.state.results) { return null; }
+    var results = this.state.results;
     return (
       <div className="step2">
         <h1>{ this.props.title }</h1>
         <div className="row">
           <div className="col-md-6">
             <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>
-            <Chart circles= { this.state.results.noPrep.circles } />
-            <div className="result-numbers">
-              <p><span className="danger">{ this.state.results.noPrep.numMen }</span> men<br /> will become HIV-positive</p>
-              <p><span className="success">{ 100 - this.state.results.noPrep.circles }</span> men<br /> will become HIV-negative</p>
-            </div> 
+            <Chart 
+              circles= { results.noPrep.circles } 
+              numMen= { results.noPrep.numMen } 
+              hivNeg= { 100 - results.noPrep.numMen } 
+            />
           </div> 
           <div className="col-md-6">
             <p>If 100 men who answered like you <strong>are taking PrEP</strong></p>
-            <Chart circles= { this.state.results.prep.circles } />
-            <div className="result-numbers">
-              <p><span className="danger">{ this.state.results.prep.numMen }</span> men<br /> will become HIV-positive</p>
-              <p><span className="success">{ 100 - this.state.results.prep.circles }</span> men<br /> will become HIV-negative</p>
-            </div> 
+            <Chart
+              circles= { results.prep.circles } 
+              numMen= { results.prep.numMen } 
+              hivNeg= { results.prep.hivNeg } 
+            />
           </div>
         </div>
       </div>

@@ -3,10 +3,6 @@ const COLS = 10;
 
 var Chart = React.createClass({
 
-  getClasses: function () {
-
-  },
-
   classesIterator: function (circles) {
     return Number.isInteger(circles) ? circles : Math.ceil(circles);
   },
@@ -21,6 +17,16 @@ var Chart = React.createClass({
     }
     return extraClass;
   },
+
+  generateStats: function () {
+    return (
+      <div className="result-numbers">
+        <p><span className="text-danger">{ this.props.numMen }</span> men<br /> will become HIV-positive</p>
+        <p><span className="text-success">{ this.props.hivNeg }</span> men<br /> will become HIV-negative</p>
+      </div> 
+    );
+  },
+
 
   renderCircles: function () {
     var chart = [];
@@ -47,9 +53,11 @@ var Chart = React.createClass({
 
   render: function () {
     var chart = this.renderCircles();
+    var stats = this.generateStats();
     return (
       <div className="prep-chart">
         { chart }
+        { stats }
       </div>
     );
   }
