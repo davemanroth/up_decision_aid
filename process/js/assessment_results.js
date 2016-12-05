@@ -124,10 +124,18 @@ var AssessmentResults = React.createClass({
           <div className="col-md-6">
             <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>
             <Chart circles= { this.state.results.noPrep.circles } />
-          </div>
+            <div className="result-numbers">
+              <p><span className="danger">{ this.state.results.noPrep.numMen }</span> men<br /> will become HIV-positive</p>
+              <p><span className="success">{ 100 - this.state.results.noPrep.circles }</span> men<br /> will become HIV-negative</p>
+            </div> 
+          </div> 
           <div className="col-md-6">
             <p>If 100 men who answered like you <strong>are taking PrEP</strong></p>
             <Chart circles= { this.state.results.prep.circles } />
+            <div className="result-numbers">
+              <p><span className="danger">{ this.state.results.prep.numMen }</span> men<br /> will become HIV-positive</p>
+              <p><span className="success">{ 100 - this.state.results.prep.circles }</span> men<br /> will become HIV-negative</p>
+            </div> 
           </div>
         </div>
       </div>

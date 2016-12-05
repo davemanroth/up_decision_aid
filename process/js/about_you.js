@@ -99,12 +99,14 @@ var AboutYou = React.createClass({
     return (
       <div className="step1">
         <h1>{ this.props.title }</h1>
+        <p>Please answer 4 questions about yourself. Some of the questions are personal, but try to answer as honestly as you can to get the best information for making your decision about PrEP. If you are unsure of the answer, give your best guess.</p>
         <form className="questions">
           { this.state.questionData.map( function (entry, idx) {
             if (entry.type === "radio") {
               var radios = this.getRadioChoices(entry.choices);
               return (
                 <div key={ idx } className="radios">
+                  <p dangerouslySetInnerHTML={ { __html: entry.question } } />
                   { radios }
                 </div>
               );
