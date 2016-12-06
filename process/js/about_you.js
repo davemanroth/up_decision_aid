@@ -101,23 +101,29 @@ var AboutYou = React.createClass({
         <h1>{ this.props.title }</h1>
         <p>Please answer 4 questions about yourself. Some of the questions are personal, but try to answer as honestly as you can to get the best information for making your decision about PrEP. If you are unsure of the answer, give your best guess.</p>
         <form className="questions">
-          { this.state.questionData.map( function (entry, idx) {
-            if (entry.type === "radio") {
-              var radios = this.getRadioChoices(entry.choices);
+          <ol>
+            { this.state.questionData.map( function (entry, idx) {
+              if (entry.type === "radio") {
+                var radios = this.getRadioChoices(entry.choices);
+                return (
+                  <div key={ idx } className="radios">
+                    <li>
+                      <p dangerouslySetInnerHTML={ { __html: entry.question } } />
+                      { radios }
+                    </li>
+                  </div>
+                );
+              }
               return (
-                <div key={ idx } className="radios">
-                  <p dangerouslySetInnerHTML={ { __html: entry.question } } />
-                  { radios }
+                <div key={ idx } className="form-group">
+                  <li>
+                    <p dangerouslySetInnerHTML={ { __html: entry.question } } />
+                    <input type={ entry.type } id= { entry.ref } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
+                  </li>
                 </div>
               );
-            }
-            return (
-              <div key={ idx } className="form-group">
-                <p dangerouslySetInnerHTML={ { __html: entry.question } } />
-                <input type={ entry.type } id= { entry.ref } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
-              </div>
-            );
-          }.bind(this))}
+            }.bind(this))}
+          </ol>
         </form>
       </div>
     )

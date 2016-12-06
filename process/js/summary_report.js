@@ -128,7 +128,7 @@ var SummaryReport = React.createClass({
     var titles = this.props.titles;
     return (
       <div className="report">
-        <h1>Your assessment report</h1>
+        <h1>Your summary</h1>
         { titles.map( function (title, idx) {
           return (
             <div key= { idx }>
@@ -137,7 +137,7 @@ var SummaryReport = React.createClass({
             </div>
           );
         }.bind(this))}
-        <div className="col-md-6 col-md-push-3">
+        <div className="col-md-6 col-md-push-3 clearfix">
           <div className="col-md-4">
             <Arrow direction="left" name="print_report" text="Print this report" />
           </div>
@@ -148,19 +148,14 @@ var SummaryReport = React.createClass({
             <Arrow direction="right" name="restart" text="Restart" />
           </div>
         </div>
+        <div className="bottomText">
+          <p>None of your answers will be saved on this website or anywhere else. </p>
+          <p>This information is not intended to replace the advice of a healthcare provider. We encourage you to talk to your healthcare provider about PrEP and your answers. See our tips for talking to your provider about sexual health and PrEP.</p>
+        </div>
       </div>
     );
   }
-  /*
-          { this.step1render() }
-          <h2>Step 2: Assessment results</h2>
 
-          <h2>Step 3: How PrEP fits with what matters most to you</h2>
-          { this.step3render() }
-          <h2>Step 4: Your next steps</h2>
-          <p>Your choice is: { this.props.stepsData[3] } </p>
-        </div>
-*/
 });
 
 module.exports = SummaryReport;
