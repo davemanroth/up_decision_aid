@@ -10,7 +10,7 @@ var AboutYou = React.createClass({
       questionData: [],
       stds: [],
       data: {},
-      errors: []
+      errors: [][]
     };
   },
 
@@ -78,6 +78,8 @@ var AboutYou = React.createClass({
       hivPartners: this.refs.hivPartners.value,
       stds: this.state.stds
     };
+
+    var result = this.checkForErrors(data);
     this.props.submitData(data);
   },
 
@@ -95,14 +97,23 @@ var AboutYou = React.createClass({
     return parseInt(val, 10);
   },
 */
-  renderErrors: function () {
+  renderErrors: function (idx) {
+    var errors = this.state.errors;
+    if (errors[idx]) {
+      return "";
+    }
+    return null;
+
+/*
     if (this.state.errors.length === 0) { return null }
     return (
       <p className="txt-danger">This is a test</p>
     );
+  */
   },
 
   render: function () {
+    var errors = this.state.errors;
     return (
       <div className="step1">
         <h1>{ this.props.title }</h1>
@@ -125,7 +136,7 @@ var AboutYou = React.createClass({
                 <div key={ idx } className="form-group">
                   <li>
                     <p dangerouslySetInnerHTML={ { __html: entry.question } } />
-                    { this.renderErrors() }
+                    { this.renderErrors(idx) }
                     <input type={ entry.type } id= { entry.ref } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
                   </li>
                 </div>
