@@ -18,11 +18,17 @@ var Chart = React.createClass({
     return extraClass;
   },
 
+  manOrMen: function (number) {
+    return number === 1 ? "man" : "men";
+  },
+
   generateStats: function () {
+    var numMen = this.props.numMen;
+    var hivNeg = this.props.hivNeg;
     return (
       <div className="result-numbers">
-        <p><span className="text-danger">{ this.props.numMen }</span> men<br /> will become HIV-positive</p>
-        <p><span className="text-success">{ this.props.hivNeg }</span> men<br /> will stay HIV-negative</p>
+        <p><span className="text-danger">{ numMen }</span> { this.manOrMen(numMen) } <br /> will become HIV-positive</p>
+        <p><span className="text-success">{ hivNeg }</span> { this.manOrMen(hivNeg) } <br /> will stay HIV-negative</p>
       </div> 
     );
   },

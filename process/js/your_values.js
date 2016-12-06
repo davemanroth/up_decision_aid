@@ -41,7 +41,7 @@ var YourValues = React.createClass({
         <h1>{ this.props.title }</h1>
         <p>Your answers to the following questions may help you see if taking PrEP fits with what matters most to you. 
         Whatever your answers may show, talking to your healthcare provider about them may help you to decide. 
-        For each question, click on the blue circle and slide it to the place on the line (from 1 to 10) that fits your answer. </p>
+        For each question, click on the blue circle and slide it to the place on the line (from 0 to 10) that fits your answer. </p>
         <div className="row">
           <div className="col-md-8 col-md-push-2">
             <div className="questions">

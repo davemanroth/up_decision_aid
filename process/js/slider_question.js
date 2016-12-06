@@ -5,7 +5,7 @@ var SliderQuestion = React.createClass({
   
   getInitialState: function () {
     return {
-      value: 0
+      value: 5
     }
   },
 
