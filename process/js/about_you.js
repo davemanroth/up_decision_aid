@@ -9,7 +9,8 @@ var AboutYou = React.createClass({
     return {
       questionData: [],
       stds: [],
-      data: {}
+      data: {},
+      errors: []
     };
   },
 
@@ -94,6 +95,12 @@ var AboutYou = React.createClass({
     return parseInt(val, 10);
   },
 */
+  renderErrors: function () {
+    if (this.state.errors.length === 0) { return null }
+    return (
+      <p className="txt-danger">This is a test</p>
+    );
+  },
 
   render: function () {
     return (
@@ -118,6 +125,7 @@ var AboutYou = React.createClass({
                 <div key={ idx } className="form-group">
                   <li>
                     <p dangerouslySetInnerHTML={ { __html: entry.question } } />
+                    { this.renderErrors() }
                     <input type={ entry.type } id= { entry.ref } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
                   </li>
                 </div>
