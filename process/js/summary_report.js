@@ -52,11 +52,19 @@ var SummaryReport = React.createClass({
       <div className="row">
         <div className="col-md-6">
           <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>
-          <Chart circles= { results.noPrep.circles } />
+          <Chart 
+            circles= { results.noPrep.circles } 
+            numMen= { results.noPrep.numMen } 
+            hivNeg= { 100 - results.noPrep.numMen } 
+          />
         </div>
         <div className="col-md-6">
           <p>If 100 men who answered like you <strong>are taking PrEP</strong></p>
-          <Chart circles= { results.prep.circles } />
+          <Chart
+            circles= { results.prep.circles } 
+            numMen= { results.prep.numMen } 
+            hivNeg= { results.prep.hivNeg } 
+          />
         </div>
       </div>
     );
@@ -137,15 +145,17 @@ var SummaryReport = React.createClass({
             </div>
           );
         }.bind(this))}
-        <div className="col-md-6 col-md-push-3 clearfix">
-          <div className="col-md-4">
-            <Arrow direction="left" name="print_report" text="Print this report" />
-          </div>
-          <div className="col-md-4">
-            <Arrow direction="left" name="download_report" text="Download this report" />
-          </div>
-          <div className="col-md-4">
-            <Arrow direction="right" name="restart" text="Restart" />
+        <div className="row clearfix">
+          <div className="col-md-6 col-md-push-3">
+            <div className="col-md-4">
+              <Arrow direction="left" name="print_report" text="Print this report" />
+            </div>
+            <div className="col-md-4">
+              <Arrow direction="left" name="download_report" text="Download this report" />
+            </div>
+            <div className="col-md-4">
+              <Arrow direction="right" name="restart" text="Restart" />
+            </div>
           </div>
         </div>
         <div className="bottomText">
