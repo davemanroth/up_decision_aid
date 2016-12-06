@@ -22,7 +22,7 @@ var Chart = React.createClass({
     return (
       <div className="result-numbers">
         <p><span className="text-danger">{ this.props.numMen }</span> men<br /> will become HIV-positive</p>
-        <p><span className="text-success">{ this.props.hivNeg }</span> men<br /> will become HIV-negative</p>
+        <p><span className="text-success">{ this.props.hivNeg }</span> men<br /> will stay HIV-negative</p>
       </div> 
     );
   },
