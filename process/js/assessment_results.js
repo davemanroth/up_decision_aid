@@ -75,7 +75,7 @@ var AssessmentResults = React.createClass({
       results.prep.circles = 6;
       results.noPrep.numMen = 7;
       results.prep.numMen = 6;
-      results.prep.hivNeg = "6";
+      results.prep.hivNeg = 94;
     }
 
     else if (score === 8) {
@@ -83,7 +83,7 @@ var AssessmentResults = React.createClass({
       results.prep.circles = 10;
       results.noPrep.numMen = 11;
       results.prep.numMen = 10;
-      results.prep.hivNeg = "10";
+      results.prep.hivNeg = 90;
     }
       
     else if (score === 10) {
