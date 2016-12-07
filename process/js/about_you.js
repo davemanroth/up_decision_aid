@@ -1,16 +1,17 @@
 var React = require('react');
 var StepsMixin = require('./steps_mixin');
+var Validator = require('./validation_mixin');
 const ABOUT_DATA = './js/about_you_questions.json';
 
 var AboutYou = React.createClass({
-  mixins: [StepsMixin(ABOUT_DATA)],
+  mixins: [StepsMixin(ABOUT_DATA), Validator],
 
   getInitialState: function () {
     return {
       questionData: [],
       stds: [],
       data: {},
-      errors: [][]
+      errors: []
     };
   },
 
@@ -72,6 +73,7 @@ var AboutYou = React.createClass({
   },
 
   handleClickAction: function (id) {
+    this.resetErrors();
     var data = {
       numPartners: this.refs.numPartners.value,
       withoutCondoms: this.refs.withoutCondoms.value,
@@ -100,7 +102,11 @@ var AboutYou = React.createClass({
   renderErrors: function (idx) {
     var errors = this.state.errors;
     if (errors[idx]) {
-      return "";
+      errors[idx].map( function (message, idy) {
+        return (
+          <p key={ idy } className="txt-danger"> { message } </p>
+        );
+      });
     }
     return null;
 
