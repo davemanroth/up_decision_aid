@@ -10,11 +10,17 @@ var Validate = {
     hiv: "This number cannot exceed the number you entered for question 2"
   },
 
+  hasNoErrors: function (data) {
+    this.checkForErrors(data);
+    return this.state.errors.length === 0;
+  },
+
   checkForErrors: function (data) {
     var idx = 0;
     for (var key in data) {
       if ( data.hasOwnProperty(key) ) {
-        if ( Validator.isEmpty(data[key].trim()) ) {
+        data[key] += "";
+        if ( Validator.isEmpty(data[key]) ) {
           this.addToErrors(this.messages.blank, idx);
           idx++;
         }
@@ -25,7 +31,12 @@ var Validate = {
 
   addToErrors: function (message, idx) {
     var errors = this.state.errors;
-    errors[idx].push(message);
+    if ( Array.isArray(errors[idx]) ) {
+      errors[idx].push(message);
+    }
+    else {
+      errors[idx] = [message];
+    }
     this.setState({
       errors: errors
     });
