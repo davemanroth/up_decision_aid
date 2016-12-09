@@ -7,8 +7,8 @@ var Validate = {
     blank: "Oops! It looks like this question was left blank. To give you the best information for making your decision about PrEP, all of the questions on this page need to be answered. If you are not sure of the answer, please give your best guess.",
     number: "Oops! The answer must be a number (no decimals). Please make sure that a number has been entered.",
 		stds: "Oops! Please answer yes or no to all questions",
-    condomless: "Oops! This number cannot exceed the number you entered for question 1",
-    hiv: "Oops! This number cannot exceed the number you entered for questions 1 or 2"
+    condomless: "Oops! This number can't be bigger than the number you entered for question 1",
+    hiv: "Oops! This number can't be bigger than the number you entered for questions 1 or 2"
   },
 
   hasNoErrors: function (data) {

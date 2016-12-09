@@ -20,17 +20,17 @@ var AboutYou = React.createClass({
     if (this.props.data) {
       this.setState({
         data: this.props.data,
-        stds: this.props.data.stds
+        stds: this.props.data.stds.split(",")
       });
     }
   },
 
 
-  getRadioChoices: function(choices) {
+  getRadioChoices: function(choices, errors) {
     var rendered = [];
     choices.map( function(choice, idx) {
       rendered.push(
-        <div key= { idx }>
+        <div key= { idx } className= { errors ? "has-error"  : "" }>
           <label className="radio-inline">
             <span>{ choice }</span>
           </label>
@@ -98,7 +98,7 @@ var AboutYou = React.createClass({
           <ol>
             { this.state.questionData.map( function (entry, idx) {
               if (entry.type === "radio") {
-                var radios = this.getRadioChoices(entry.choices);
+                var radios = this.getRadioChoices(entry.choices, errors[idx]);
                 return (
                   <div key={ idx } className="radios">
                     <li>
@@ -112,7 +112,7 @@ var AboutYou = React.createClass({
                 );
               }
               return (
-                <div key={ idx } className="form-group">
+                <div key={ idx } className={ errors[idx] ? "form-group has-error"  : "form-group" }>
                   <li>
                     <p dangerouslySetInnerHTML={ { __html: entry.question } } />
                     <ErrorMessage 

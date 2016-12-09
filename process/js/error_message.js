@@ -24,10 +24,10 @@ var ErrorMessage = React.createClass({
     }
     else if (Array.isArray(errors) && errors.length > 0) {
       errors.map( function (err, idx) {
-        return <p key= { idx } > { err } </p>
+        return <p className="text-danger" key= { idx } > { err } </p>
       });
     }
-   return <p>{ errors }</p>
+   return <p className="text-danger">{ errors }</p>
   }
 });
 
