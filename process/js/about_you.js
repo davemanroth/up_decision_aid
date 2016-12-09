@@ -88,44 +88,6 @@ var AboutYou = React.createClass({
     }
   },
 
-/*
-  isValidData: function (data) {
-    values = Object.values(data);
-    values = values.slice(0, values.length - 1);
-    return this.isNumerical(values);
-  },
-  isNumerical: function (values) {
-    return values.every(this.isNum);
-  },
-
-  isNum: function (val) {
-    return parseInt(val, 10);
-  },
-*/
-  renderErrors: function (idx) {
-    var errors = this.state.errors;
-    if (errors[idx]) {
-      errors[idx].map( function (message, idy) {
-        return (
-          <p key={ idy } className="txt-danger"> { message } </p>
-        );
-      });
-    }
-    return null;
-
-/*
-    if (this.state.errors.length === 0) { return null }
-    return (
-      <p className="txt-danger">This is a test</p>
-    );
-  */
-  },
-
-  anyErrors: function (idx) {
-    var errors = this.state.errors;
-    return errors[idx] !== undefined;
-  },
-
   render: function () {
     var errors = this.state.errors;
     return (
