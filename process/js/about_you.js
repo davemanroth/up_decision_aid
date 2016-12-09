@@ -1,6 +1,7 @@
 var React = require('react');
 var StepsMixin = require('./steps_mixin');
 var Validator = require('./validation_mixin');
+var ErrorMessage = require('./error_message');
 const ABOUT_DATA = './js/about_you_questions.json';
 
 var AboutYou = React.createClass({
@@ -23,6 +24,7 @@ var AboutYou = React.createClass({
       });
     }
   },
+
 
   getRadioChoices: function(choices) {
     var rendered = [];
@@ -139,6 +141,9 @@ var AboutYou = React.createClass({
                   <div key={ idx } className="radios">
                     <li>
                       <p dangerouslySetInnerHTML={ { __html: entry.question } } />
+                      <ErrorMessage 
+                        errors= { errors[idx] ? errors[idx] : null } 
+                      />
                       { radios }
                     </li>
                   </div>
@@ -148,9 +153,9 @@ var AboutYou = React.createClass({
                 <div key={ idx } className="form-group">
                   <li>
                     <p dangerouslySetInnerHTML={ { __html: entry.question } } />
-                    { if (this.state.errors[idx] !== undefined) { this.state.errors[idx].map( function (err, idy) {
-                      return <p class="txt-danger"> { err } </p>;
-                    })}}
+                    <ErrorMessage 
+                      errors= { errors[idx] ? errors[idx] : null } 
+                    />
                     <input type={ entry.type } id= { entry.ref } ref={ entry.ref } className="form-control text-input" value = { this.state.data[entry.ref] } onChange= { this.handleChange } />
                   </li>
                 </div>

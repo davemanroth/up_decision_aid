@@ -12,6 +12,10 @@ var UpDecisionAid = React.createClass({
     };
   },
 
+  componentWillUpdate: function () {
+    console.log(arguments);
+  },
+
   updateStep: function (step) {
     nextStep = this.state.currentStep + step;
     if (nextStep < 0) {

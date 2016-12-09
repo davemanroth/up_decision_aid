@@ -22,8 +22,11 @@ var Validate = {
         data[key] += "";
         if ( Validator.isEmpty(data[key]) ) {
           this.addToErrors(this.messages.blank, idx);
-          idx++;
         }
+        else {
+          this.addToErrors(null, idx);
+        }
+        idx++;
       }
     }
 
