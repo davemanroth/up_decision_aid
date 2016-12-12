@@ -8,8 +8,8 @@ var Arrow = React.createClass({
         <button 
           id= { this.props.name }
           role="button" 
-          className={ this.props.direction }>
-          { this.props.text }
+          className={"btn btn-prep btn-prep-" +  this.props.direction }>
+          { this.props.text } { this.props.currStep } of 4
         </button>
       </div>
     );

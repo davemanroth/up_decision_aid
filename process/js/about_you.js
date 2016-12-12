@@ -92,8 +92,8 @@ var AboutYou = React.createClass({
     var errors = this.state.errors;
     return (
       <div className="step1">
-        <h1>{ this.props.title }</h1>
-        <p>Please answer 4 questions about yourself. Some of the questions are personal, but try to answer as honestly as you can to get the best information for making your decision about PrEP. If you are unsure of the answer, give your best guess.</p>
+        <h1><span className="bolder">Step { this.props.currentStep + 1 }:</span> { this.props.title }</h1>
+        <p className="prep-instructions">Please answer 4 questions about yourself. Some of the questions are personal, but try to answer as honestly as you can to get the best information for making your decision about PrEP. If you are unsure of the answer, give your best guess.</p>
         <form className="questions">
           <ol>
             { this.state.questionData.map( function (entry, idx) {

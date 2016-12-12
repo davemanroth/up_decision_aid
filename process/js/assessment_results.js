@@ -36,25 +36,21 @@ var AssessmentResults = React.createClass({
     var results = this.state.results;
     return (
       <div className="step2">
-        <h1>{ this.props.title }</h1>
-        <div className="row">
-          <div className="col-md-6">
-            <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>
-            <Chart 
-              circles= { results.noPrep.circles } 
-              numMen= { results.noPrep.numMen } 
-              hivNeg= { 100 - results.noPrep.numMen } 
-            />
-          </div> 
-          <div className="col-md-6">
-            <p>If 100 men who answered like you <strong>are taking PrEP</strong></p>
-            <Chart
-              circles= { results.prep.circles } 
-              numMen= { results.prep.numMen } 
-              hivNeg= { results.prep.hivNeg } 
-            />
-          </div>
-        </div>
+        <h1><span className="bolder">Step { this.props.currentStep + 1 }:</span><br /> { this.props.title }</h1>
+        <h2>Without PrEP</h2>
+        <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>
+        <Chart 
+          circles= { results.noPrep.circles } 
+          numMen= { results.noPrep.numMen } 
+          hivNeg= { 100 - results.noPrep.numMen } 
+        />
+        <h2>WithPrEP</h2>
+        <p>If 100 men who answered like you <strong>are taking PrEP</strong></p>
+        <Chart
+          circles= { results.prep.circles } 
+          numMen= { results.prep.numMen } 
+          hivNeg= { results.prep.hivNeg } 
+        />
       </div>
     );
   }

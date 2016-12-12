@@ -5,10 +5,10 @@ var YourValues = require('./your_values');
 var NextSteps = require('./next_steps');
 var SummaryReport = require('./summary_report');
 const TITLES = [
-  "Step 1: About you",
-  "Step 2: Chances of getting HIV, with and without PrEP",
-  "Step 3: How PrEP fits with what matters most to you",
-  "Step 4: Your next steps"
+  "About you",
+  "Chances of getting HIV, with and without PrEP",
+  "How PrEP fits with what matters most to you",
+  "Your next steps"
 ];
 
 var Steps = React.createClass({
@@ -62,6 +62,7 @@ var Steps = React.createClass({
         return (
           <AssessmentResults 
             title= { TITLES[currStep] }
+            currentStep={ this.props.currentStep }
             responses={ this.state.steps[0] }
             submitData={ this.submitData }
             backStep = { this.backStep }
@@ -72,6 +73,7 @@ var Steps = React.createClass({
         return (
           <YourValues 
             title= { TITLES[currStep] }
+            currentStep={ this.props.currentStep }
             submitData={ this.submitData }
             storeQuestions= { this.storeQuestions }
           />
@@ -80,6 +82,7 @@ var Steps = React.createClass({
         return (
           <NextSteps 
             title= { TITLES[currStep] }
+            currentStep={ this.props.currentStep }
             submitData={ this.submitData }
             storeQuestions= { this.storeQuestions }
           />
@@ -88,6 +91,7 @@ var Steps = React.createClass({
         return (
           <SummaryReport 
             titles= { TITLES }
+            currentStep={ this.props.currentStep }
             stepsData= { this.state.steps }
             questionsData= { this.state.questions }
           />

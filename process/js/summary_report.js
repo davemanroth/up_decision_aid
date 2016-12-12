@@ -140,7 +140,7 @@ var SummaryReport = React.createClass({
         { titles.map( function (title, idx) {
           return (
             <div key= { idx }>
-              <h2> { title } </h2>
+              <h2>Step { idx + 1 }: { title } </h2>
               { this.renderStep(idx) }
             </div>
           );

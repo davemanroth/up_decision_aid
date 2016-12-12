@@ -27,8 +27,8 @@ var Chart = React.createClass({
     var hivNeg = this.props.hivNeg;
     return (
       <div className="result-numbers">
-        <p><span className="text-danger">{ numMen }</span> { this.manOrMen(numMen) } <br /> will become HIV-positive</p>
-        <p><span className="text-success">{ hivNeg }</span> { this.manOrMen(hivNeg) } <br /> will stay HIV-negative</p>
+        <p><span className="number bolder">{ numMen } { this.manOrMen(numMen) } </span><br /> will become HIV-positive</p>
+        <p><span className="number bolder">{ hivNeg } { this.manOrMen(hivNeg) } </span><br /> will stay HIV-negative</p>
       </div> 
     );
   },
@@ -61,9 +61,17 @@ var Chart = React.createClass({
     var chart = this.renderCircles();
     var stats = this.generateStats();
     return (
-      <div className="prep-chart">
-        { chart }
-        { stats }
+      <div className="prep-chart row">
+        <div className="col-lg-4 col-md-5">
+          <div className="chart">
+            { chart }
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-5">
+          <div className="stats">
+            { stats }
+          </div>
+        </div>
       </div>
     );
   }

@@ -41,9 +41,9 @@ var NextSteps = React.createClass({
     var choices = this.state.questionData[0].choices;
     return (
       <div className="step4">
-        <h1>{ this.props.title }</h1>
+        <h1><span className="bolder">Step { this.props.currentStep + 1 }:</span><br /> { this.props.title }</h1>
         <div className="questions">
-          <p>{ this.state.questionData[0].question }</p>
+          <p className="prep-instructions">{ this.state.questionData[0].question }</p>
           <div className="radios">
             { choices.map( function (choice, idx) {
                 return (
