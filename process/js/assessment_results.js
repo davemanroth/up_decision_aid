@@ -37,6 +37,7 @@ var AssessmentResults = React.createClass({
     return (
       <div className="step2">
         <h1><span className="bolder">Step { this.props.currentStep + 1 }:</span><br /> { this.props.title }</h1>
+        <p className="lead-in-text">This is an estimate of your chances of becoming HIV-positive over one year.</p>
         <div className="results-heading">
           <h2>Without PrEP</h2>
           <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>

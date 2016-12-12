@@ -1,18 +1,18 @@
 [
     {
-      "question" : "<strong>In the last year,</strong> how many men have you had sex with?<br /> <em>Fill in your answer (must be a number):</em>",
+      "question" : "<strong>In the last year,</strong> how many men have you had sex with? <span class='prep-instructions'>Fill in your answer (must be a number):</span>",
       "type" : "text",
       "ref" : "numPartners"
     },
 
     {
-      "question" : "<strong>In the last year,</strong> how many men have you had anal sex with without condoms when you were the bottom (condomless receptive anal sex)?<br /> <em>Fill in your answer (must be a number):</em>",
+      "question" : "<strong>In the last year,</strong> how many men have you had anal sex with without condoms when you were the bottom (condomless receptive anal sex)? <span class='prep-instructions'>Fill in your answer (must be a number):</span>",
       "type" : "text",
       "ref" : "withoutCondoms"
     },
 
     {
-      "question" : "<strong>In the last year,</strong> how many HIV-positive men have you had anal sex with without condoms when you were the bottom (condomless receptive anal sex)?<br /> <em>Fill in your answer (must be a number):</em>",
+      "question" : "<strong>In the last year,</strong> how many HIV-positive men have you had anal sex with without condoms when you were the bottom (condomless receptive anal sex)? <span class='prep-instructions'>Fill in your answer (must be a number):</span>",
       "type" : "text",
       "ref" : "hivPartners"
     },
