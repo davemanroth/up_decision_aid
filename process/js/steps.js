@@ -19,6 +19,10 @@ var Steps = React.createClass({
     }
   },
 
+  restart: function () {
+    this.updateStep(0);
+  },
+
   backStep: function () {
     this.updateStep(-1);
   },
@@ -94,6 +98,7 @@ var Steps = React.createClass({
             currentStep={ this.props.currentStep }
             stepsData= { this.state.steps }
             questionsData= { this.state.questions }
+            restart= { this.restart }
           />
         );
       default:

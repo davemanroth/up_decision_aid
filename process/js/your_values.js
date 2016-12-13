@@ -43,14 +43,16 @@ var YourValues = React.createClass({
         <p className="prep-instructions">For each question, click on the blue circle and slide it to the place on the line (from 0 to 10) that fits your answer. </p>
         <div className="row">
           <div className="col-md-10 col-md-push-1">
-            <div className="col-md-6">
-              <div className="slider-scale slider-scale-left">
-                <p>Answers on this side support taking PrEP</p>
+            <div className="row">
+              <div className="col-md-6">
+                <div className="slider-scale slider-scale-left">
+                  <p>Answers on this side support taking PrEP</p>
+                </div>
               </div>
-            </div>
-            <div className="col-md-6">
-              <div className="slider-scale slider-scale-right">
-                <p>Answers on this side don't support taking PrEP</p>
+              <div className="col-md-6">
+                <div className="slider-scale slider-scale-right">
+                  <p>Answers on this side don't support taking PrEP</p>
+                </div>
               </div>
             </div>
             <div className="questions">

@@ -12,6 +12,19 @@ var SummaryReport = React.createClass({
     }
   },
 
+  printSummary: function (e) {
+    e.preventDefault();
+  },
+    
+  printSummary: function (e) {
+    e.preventDefault();
+  },
+
+  restart: function (e) {
+    this.props.restart;
+    e.preventDefault();
+  },
+
   updateCount: function () {
     var newCount = this.state.count;
     newCount++;
@@ -22,28 +35,30 @@ var SummaryReport = React.createClass({
 
   step1render: function (step, results, entry, idx) {
     var question = entry.question.split("?").shift();
+    var stds = results.stds.split(",");
     if (entry.choices) {
       return (
-        <div key= { idx }>
+        <li key= { idx }>
           <p dangerouslySetInnerHTML= { { __html: question } } />
+          <p className="response">You answered:</p>
           <ul>
             { entry.choices.map( function (choice, idy) {
               return (
                 <li key= { idy }>
-                  { choice }: { results.stds[idy] }
+                  { choice }: { stds[idy] }
                 </li>
               );
             })}
           </ul>
-        </div>
+        </li>
       );
     }
     question = question + "?";
     return (
-      <div key= { idx }>
+      <li key= { idx }>
         <p dangerouslySetInnerHTML= { { __html: question } } />
-        <p>You answered: <strong> { results[entry.ref] } </strong></p>
-      </div>
+        <p className="response">You answered: <strong> { results[entry.ref] } </strong></p>
+      </li>
     );
   },
 
@@ -100,11 +115,11 @@ var SummaryReport = React.createClass({
       // Step 1: About you
       case 0:
         return (
-          <div>
+          <ol>
             { questions.map( function (entry, idx) {
               return this.step1render(step, results, entry, idx);
             }.bind(this))}
-          </div>
+          </ol>
         );
 
       //Step 2: Chances of getting HIV
@@ -146,16 +161,26 @@ var SummaryReport = React.createClass({
           );
         }.bind(this))}
         <div className="row clearfix">
-          <div className="col-md-6 col-md-push-3">
-            <div className="col-md-4">
-              <Arrow direction="left" name="print_report" text="Print this report" />
-            </div>
-            <div className="col-md-4">
-              <Arrow direction="left" name="download_report" text="Download this report" />
-            </div>
-            <div className="col-md-4">
-              <Arrow direction="right" name="restart" text="Restart" />
-            </div>
+          <div className="col-md-4">
+            <button 
+              className="btn btn-prep btn-prep-summary" 
+              onClick= { this.printSummary }>
+              Print this summary
+            </button>
+          </div>
+          <div className="col-md-4">
+            <button 
+              className="btn btn-prep btn-prep-summary" 
+              onClick= { this.downloadSummary }>
+              Download this summary
+            </button>
+          </div>
+          <div className="col-md-4">
+            <button 
+              className="btn btn-prep btn-prep-summary" 
+              onClick= { this.restart }>
+              Restart
+            </button>
           </div>
         </div>
         <div className="bottomText">
