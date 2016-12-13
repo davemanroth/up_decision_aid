@@ -13,16 +13,13 @@ var SummaryReport = React.createClass({
   },
 
   printSummary: function (e) {
-    e.preventDefault();
   },
     
   printSummary: function (e) {
-    e.preventDefault();
   },
 
-  restart: function (e) {
-    this.props.restart;
-    e.preventDefault();
+  restart: function () {
+    this.props.restart();
   },
 
   updateCount: function () {

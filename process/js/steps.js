@@ -20,7 +20,11 @@ var Steps = React.createClass({
   },
 
   restart: function () {
-    this.updateStep(0);
+    this.setState({
+      questions: [],
+      steps: []
+    });
+    this.updateStep(-4);
   },
 
   backStep: function () {
