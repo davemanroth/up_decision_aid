@@ -37,10 +37,13 @@ var Steps = React.createClass({
 
   storeQuestions: function (toAdd) {
     var questions = this.state.questions;
-    questions.push(toAdd);
-    this.setState({
-      questions: questions
-    });
+    var currStep = this.props.currentStep;
+    if (!questions[currStep]) {
+      questions.push(toAdd);
+      this.setState({
+        questions: questions
+      });
+    }
   },
 
   submitData: function (data) {
