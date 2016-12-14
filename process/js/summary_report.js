@@ -2,6 +2,7 @@ var React = require('react');
 var Arrow = require('./arrow');
 var Chart = require('./chart');
 var SliderQuestion = require('./slider_question');
+var SliderScale = require('./slider_scale');
 var StepsMixin = require('./steps_mixin');
 
 var SummaryReport = React.createClass({
@@ -33,17 +34,16 @@ var SummaryReport = React.createClass({
 
   step1render: function (step, results, entry, idx) {
     var question = entry.question.split("?").shift();
-    var stds = results.stds.split(",");
     if (entry.choices) {
       return (
         <li key= { idx }>
           <p dangerouslySetInnerHTML= { { __html: question } } />
-          <p className="response">You answered:</p>
+          <p className="orange italic">You answered:</p>
           <ul>
             { entry.choices.map( function (choice, idy) {
               return (
                 <li key= { idy }>
-                  { choice }: { stds[idy] }
+                  { choice }: <span className="orange response">{ results.stds[idy] }</span>
                 </li>
               );
             })}
@@ -53,9 +53,9 @@ var SummaryReport = React.createClass({
     }
     question = question + "?";
     return (
-      <li key= { idx }>
+      <li className="question" key= { idx }>
         <p dangerouslySetInnerHTML= { { __html: question } } />
-        <p className="response">You answered: <strong> { results[entry.ref] } </strong></p>
+        <p className="orange italic">You answered: <span className="response"> { results[entry.ref] } </span></p>
       </li>
     );
   },
@@ -128,7 +128,8 @@ var SummaryReport = React.createClass({
       case 2:
         return (
           <div className="row">
-            <div className="col-md-8 col-md-push-2">
+            <div className="col-md-10 col-md-push-1">
+              <SliderScale />
               { questions.map( function (entry, idx) {
                 return this.step3render(step, results, entry, idx);
               }.bind(this))}
