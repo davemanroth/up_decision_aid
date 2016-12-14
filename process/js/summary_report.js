@@ -16,6 +16,7 @@ var SummaryReport = React.createClass({
   },
     
   printSummary: function (e) {
+    window.print();
   },
 
   restart: function () {
