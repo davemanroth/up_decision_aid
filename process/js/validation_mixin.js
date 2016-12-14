@@ -1,7 +1,7 @@
 var React = require('react');
 var Validator = require('validator');
 
-var Validate = {
+var Validation = {
 
   messages: {
     blank: "Oops! It looks like this question was left blank. To give you the best information for making your decision about PrEP, all of the questions on this page need to be answered. If you are not sure of the answer, please give your best guess.",
@@ -25,14 +25,87 @@ var Validate = {
 		return true;
 	},
 
+  checkIndividualFields: function (data, idx) {
+    var numPartners = Number.parseInt(data.numPartners);
+    var withoutCondoms = Number.parseInt(data.withoutCondoms);
+    var hivPartners = Number.parseInt(data.hivPartners);
+    switch (idx) {
+      case 1:
+        if (withoutCondoms > numPartners) {
+          console.log(numPartners);
+          console.log(numPartners > withoutCondoms);
+          this.addToErrors(this.messages.condomless, idx);
+        }
+        break;
+      case 2:
+        if (hivPartners > withoutCondoms ||
+            hivPartners > numPartners ) {
+          this.addToErrors(this.messages.hiv, idx);
+        }
+        break;
+      case 3:
+        if (data.stds.split(",").length !== 3) {
+          this.addToErrors(this.messages.stds, idx);
+        }
+        break;
+      default:
+    }
+  },
+
   checkForErrors: function (data) {
     var idx = 0;
+    var stds = data.stds;
     for (var key in data) {
       if ( data.hasOwnProperty(key) ) {
         data[key] += "";
         if ( Validator.isEmpty(data[key]) ) {
           this.addToErrors(this.messages.blank, idx);
         }
+        else if (idx !== 3 && !Validator.isInt(data[key]) ) {
+          this.addToErrors(this.messages.number, idx);
+        }
+        else {
+          this.checkIndividualFields(data, idx);
+        }//else
+      }//if
+      idx++;
+    }//for
+    data.stds = stds;
+  },
+/*
+          if (data.withoutCondoms > data.numPartners) {
+            this.addToErrors(this.messages.condomless, 1);
+          }
+          if (data.hivPartners > data.withoutCondoms ||
+              data.hivPartners > data.numPartners ) {
+            this.addToErrors(this.messages.condomless, 2);
+          }
+          if (data.stds.length !== 3) {
+            this.addToErrors(this.messages.stds, 3);
+          }
+        }
+
+          switch (idx) {
+            case 1:
+              if (data.withoutCondoms > data.numPartners) {
+                this.addToErrors(this.messages.condomless, idx);
+              }
+              break;
+            case 2:
+              if (data.hivPartners > data.withoutCondoms ||
+                  data.hivPartners > data.numPartners ) {
+                this.addToErrors(this.messages.condomless, idx);
+              }
+              break;
+            case 3:
+              if (data.stds.length !== 3) {
+                this.addToErrors(this.messages.stds, idx);
+              }
+              break;
+            default:
+          }//switch
+        }// else
+
         else if ( idx === 1 && data.withoutCondoms > data.numPartners ) {
           this.addToErrors(this.messages.condomless, idx);
         }
@@ -48,11 +121,7 @@ var Validate = {
           this.addToErrors(this.messages.number, idx);
         }
 				else {}
-        idx++;
-      }
-    }
-
-  },
+*/
 
   addToErrors: function (message, idx) {
     var errors = this.state.errors;
@@ -80,4 +149,4 @@ var Validate = {
   }
 }
 
-module.exports = Validate;
+module.exports = Validation;

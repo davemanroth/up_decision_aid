@@ -1,11 +1,11 @@
 var React = require('react');
 var StepsMixin = require('./steps_mixin');
-var Validator = require('./validation_mixin');
+var Validation = require('./validation_mixin');
 var ErrorMessage = require('./error_message');
 const ABOUT_DATA = './js/about_you_questions.json';
 
 var AboutYou = React.createClass({
-  mixins: [StepsMixin(ABOUT_DATA), Validator],
+  mixins: [StepsMixin(ABOUT_DATA), Validation],
 
   getInitialState: function () {
     return {
@@ -20,7 +20,7 @@ var AboutYou = React.createClass({
     if (this.props.data) {
       this.setState({
         data: this.props.data,
-        stds: this.props.data.stds.split(",")
+        stds: this.props.data.stds
       });
     }
   },

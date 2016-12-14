@@ -12,7 +12,7 @@ var SummaryReport = React.createClass({
     }
   },
 
-  printSummary: function (e) {
+  printSummary: function () {
   },
     
   printSummary: function (e) {
