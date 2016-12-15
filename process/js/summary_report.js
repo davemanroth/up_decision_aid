@@ -104,7 +104,7 @@ var SummaryReport = React.createClass({
     return (
       <div>
         <p> { question } </p>
-        <p>Your answer: { results }</p>
+        <p className="orange italic">You answered: <span className="response"> { results }</span></p>
       </div>
     );
   },

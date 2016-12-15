@@ -44,8 +44,10 @@ var Validation = {
         }
         break;
       case 3:
+        // Make stds into array again
         var stds = data.stds.split(",");
         if (stds.length === 3 && !stds.includes(null) && !stds.includes("") ) {
+        // reassign array to Object only if it is valid
           data.stds = stds;
         }
         else {
@@ -60,6 +62,7 @@ var Validation = {
     var idx = 0;
     for (var key in data) {
       if ( data.hasOwnProperty(key) ) {
+      // Convert each object value into a string in order to use Validator module
         data[key] += "";
         if ( Validator.isEmpty(data[key]) ) {
           this.addToErrors(this.messages.blank, idx);

@@ -24,7 +24,7 @@ var StepsButtons = React.createClass({
     return (
       <div className="summary-buttons">
         <div className="row">
-          <div className="col-md-6 col-md-push-3">
+          <div className="col-md-10 col-md-push-1">
             <SummaryButton
               name="print-summary"
               text="Print a summary of your answers and notes"
@@ -37,7 +37,7 @@ var StepsButtons = React.createClass({
         </div>
         <p className="italic txt-center">None of your answers will be saved on this website or anywhere else</p>
         <div className="clearfix">
-          <Arrow text="Restart" name="restart" />
+          <Arrow direction="left" text="Restart" name="restart" />
         </div>
         <p>This information is not intended to replace the advice of a healthcare provider. We encourage you to talk to your healthcare provider about PrEP and your answers. See our tips for talking to your provider about sexual health and PrEP.</p>
       </div>
