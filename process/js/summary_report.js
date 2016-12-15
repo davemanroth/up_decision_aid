@@ -36,7 +36,7 @@ var SummaryReport = React.createClass({
     var question = entry.question.split("?").shift();
     if (entry.choices) {
       return (
-        <li key= { idx }>
+        <li className="question" key= { idx }>
           <p dangerouslySetInnerHTML= { { __html: question } } />
           <p className="orange italic">You answered:</p>
           <ul>
@@ -113,7 +113,7 @@ var SummaryReport = React.createClass({
       // Step 1: About you
       case 0:
         return (
-          <ol>
+          <ol className="list-space">
             { questions.map( function (entry, idx) {
               return this.step1render(step, results, entry, idx);
             }.bind(this))}
@@ -149,11 +149,11 @@ var SummaryReport = React.createClass({
   render: function () {
     var titles = this.props.titles;
     return (
-      <div className="report">
+      <div className="summary">
         <h1>Your summary</h1>
         { titles.map( function (title, idx) {
           return (
-            <div key= { idx }>
+            <div className="summary-step" key= { idx }>
               <h2>Step { idx + 1 }: { title } </h2>
               { this.renderStep(idx) }
             </div>

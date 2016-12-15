@@ -44,7 +44,11 @@ var Validation = {
         }
         break;
       case 3:
-        if (data.stds.split(",").length !== 3) {
+        var stds = data.stds.split(",");
+        if (stds.length === 3 && !stds.includes(null) && !stds.includes("") ) {
+          data.stds = stds;
+        }
+        else {
           this.addToErrors(this.messages.stds, idx);
         }
         break;
@@ -54,7 +58,6 @@ var Validation = {
 
   checkForErrors: function (data) {
     var idx = 0;
-    var stds = data.stds;
     for (var key in data) {
       if ( data.hasOwnProperty(key) ) {
         data[key] += "";
@@ -70,7 +73,6 @@ var Validation = {
       }//if
       idx++;
     }//for
-    data.stds = stds;
   },
 /*
           if (data.withoutCondoms > data.numPartners) {
