@@ -6,6 +6,7 @@ var SliderScale = require('./slider_scale');
 var StepsMixin = require('./steps_mixin');
 
 var SummaryReport = React.createClass({
+  mixins: [StepsMixin(false)],
 
   getInitialState: function () {
     return {
@@ -13,17 +14,19 @@ var SummaryReport = React.createClass({
     }
   },
 
-  downloadSummary: function () {
+  handleClickAction: function (id) {
+    if (id === 'print-summary') {
+      window.print();
+    }
+    else if (id === 'download-summary') {
+      return null;
+    }
+    else if (id === 'restart') {
+      this.props.restart();
+    }
+    else {}
   },
-    
-  printSummary: function (e) {
-    window.print();
-  },
-
-  restart: function () {
-    this.props.restart();
-  },
-
+  
   updateCount: function () {
     var newCount = this.state.count;
     newCount++;
@@ -159,33 +162,6 @@ var SummaryReport = React.createClass({
             </div>
           );
         }.bind(this))}
-        <div className="row clearfix">
-          <div className="col-md-4">
-            <button 
-              className="btn btn-prep btn-prep-summary" 
-              onClick= { this.printSummary }>
-              Print this summary
-            </button>
-          </div>
-          <div className="col-md-4">
-            <button 
-              className="btn btn-prep btn-prep-summary" 
-              onClick= { this.downloadSummary }>
-              Download this summary
-            </button>
-          </div>
-          <div className="col-md-4">
-            <button 
-              className="btn btn-prep btn-prep-summary" 
-              onClick= { this.restart }>
-              Restart
-            </button>
-          </div>
-        </div>
-        <div className="bottomText">
-          <p>None of your answers will be saved on this website or anywhere else. </p>
-          <p>This information is not intended to replace the advice of a healthcare provider. We encourage you to talk to your healthcare provider about PrEP and your answers. See our tips for talking to your provider about sexual health and PrEP.</p>
-        </div>
       </div>
     );
   }

@@ -17,7 +17,7 @@ var AboutYou = React.createClass({
   },
 
   componentWillMount: function () {
-    if (this.props.data) {
+    if (this.props.data && !this.props.restart) {
       this.setState({
         data: this.props.data,
         stds: this.props.data.stds
@@ -76,6 +76,7 @@ var AboutYou = React.createClass({
 
   handleClickAction: function (id) {
     this.resetErrors();
+    this.props.resetRestart();
     var data = {
       numPartners: this.refs.numPartners.value,
       withoutCondoms: this.refs.withoutCondoms.value,

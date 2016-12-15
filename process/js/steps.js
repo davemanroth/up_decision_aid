@@ -15,16 +15,26 @@ var Steps = React.createClass({
   getInitialState: function () {
     return {
       questions: [],
-      steps: []
+      steps: [],
+      restart: false
     }
   },
 
   restart: function () {
     this.setState({
-      questions: [],
-      steps: []
+      restart: true
     });
     this.updateStep(-4);
+    this.setState({
+      questions: [],
+      steps: [],
+    });
+  },
+
+  resetRestart: function () {
+    this.setState({
+      restart: false
+    });
   },
 
   backStep: function () {
@@ -66,6 +76,8 @@ var Steps = React.createClass({
             currentStep={ this.props.currentStep }
             submitData={ this.submitData }
             data = { this.state.steps[0] }
+            restart = { this.state.restart }
+            resetRestart = { this.resetRestart }
             storeQuestions= { this.storeQuestions }
           />
         );

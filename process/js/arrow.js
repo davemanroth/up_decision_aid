@@ -3,7 +3,7 @@ var React = require('react');
 var Arrow = React.createClass({
 
   getButtonText: function (text) {
-    if (text === 'Back' || text === 'Finish') {
+    if (text === 'Back' || text === 'Finish' || text === 'Restart') {
       return text;
     }
     return [this.props.text, this.props.currStep, "of 4"].join(" ");
