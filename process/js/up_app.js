@@ -53,10 +53,10 @@ var UpDecisionAid = React.createClass({
           currentStep={ this.state.currentStep }
           updateStep= { this.updateStep }
         />
+        <Notes />
         <div className="arrows clearfix">
           { this.renderArrows(this.state.currentStep) }
         </div>
-        <Notes />
       </div>
     );
   } //render
