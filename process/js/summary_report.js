@@ -133,9 +133,11 @@ var SummaryReport = React.createClass({
           <div className="row">
             <div className="col-md-10 col-md-push-1">
               <SliderScale />
-              { questions.map( function (entry, idx) {
-                return this.step3render(step, results, entry, idx);
-              }.bind(this))}
+              <div className="slider-questions-container">
+                { questions.map( function (entry, idx) {
+                  return this.step3render(step, results, entry, idx);
+                }.bind(this))}
+              </div>
             </div>
           </div>
         );

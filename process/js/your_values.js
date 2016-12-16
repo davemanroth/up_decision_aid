@@ -45,7 +45,7 @@ var YourValues = React.createClass({
         <div className="row">
           <div className="col-md-10 col-md-push-1">
             <SliderScale />
-            <div className="questions">
+            <div className="slider-questions-container">
               { this.state.questionData.map( function (entry, idx) {
                 return (
                   <SliderQuestion

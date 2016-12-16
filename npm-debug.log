@@ -1,0 +1,666 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose readDependencies loading dependencies from /Users/david/Sites/up_decision_aid/package.json
+5 warn package.json up_decision_aid@1.0.0 No license field.
+6 verbose install where, deps [ '/Users/david/Sites/up_decision_aid',
+6 verbose install   [ 'rc-slider',
+6 verbose install     'gulp',
+6 verbose install     'gulp-browserify',
+6 verbose install     'gulp-react',
+6 verbose install     'gulp-webserver',
+6 verbose install     'jshint-stylish',
+6 verbose install     'lodash',
+6 verbose install     'react',
+6 verbose install     'react-dom',
+6 verbose install     'react-pdf',
+6 verbose install     'reactify',
+6 verbose install     'validator' ] ]
+7 verbose install where, peers [ '/Users/david/Sites/up_decision_aid', [] ]
+8 verbose installManyTop reading for lifecycle /Users/david/Sites/up_decision_aid/package.json
+9 info preinstall up_decision_aid@1.0.0
+10 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/classnames/package.json
+11 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/gulp/package.json
+12 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-browserify/package.json
+13 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-react/package.json
+14 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-webserver/package.json
+15 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/jshint-stylish/package.json
+16 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/lodash/package.json
+17 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/rc-slider/package.json
+18 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/react/package.json
+19 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/react-dom/package.json
+20 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/react-pdf/package.json
+21 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/react-validation/package.json
+22 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/reactify/package.json
+23 verbose installManyTop reading scoped package data from /Users/david/Sites/up_decision_aid/node_modules/validator/package.json
+24 info package.json rc-slider@5.3.5 No license field.
+25 verbose readDependencies loading dependencies from /Users/david/Sites/up_decision_aid/package.json
+26 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/classnames/package.json
+27 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp/package.json
+28 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-browserify/package.json
+29 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-react/package.json
+30 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-webserver/package.json
+31 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/jshint-stylish/package.json
+32 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/lodash/package.json
+33 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/rc-slider/package.json
+34 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react/package.json
+35 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react-dom/package.json
+36 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react-pdf/package.json
+37 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react-validation/package.json
+38 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/reactify/package.json
+39 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/validator/package.json
+40 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/.bin/gulp/package.json
+41 verbose already installed skipping lodash@^4.13.1 /Users/david/Sites/up_decision_aid
+42 verbose already installed skipping react@^15.1.0 /Users/david/Sites/up_decision_aid
+43 verbose already installed skipping react-dom@^15.1.0 /Users/david/Sites/up_decision_aid
+44 silly cache add args [ 'react-pdf@^0.0.10', null ]
+45 verbose cache add spec react-pdf@^0.0.10
+46 silly cache add parsed spec Result {
+46 silly cache add   raw: 'react-pdf@^0.0.10',
+46 silly cache add   scope: null,
+46 silly cache add   name: 'react-pdf',
+46 silly cache add   rawSpec: '^0.0.10',
+46 silly cache add   spec: '>=0.0.10 <0.0.11',
+46 silly cache add   type: 'range' }
+47 silly addNamed react-pdf@>=0.0.10 <0.0.11
+48 verbose addNamed ">=0.0.10 <0.0.11" is a valid semver range for react-pdf
+49 silly addNameRange { name: 'react-pdf', range: '>=0.0.10 <0.0.11', hasData: false }
+50 silly mapToRegistry name react-pdf
+51 silly mapToRegistry using default registry
+52 silly mapToRegistry registry https://registry.npmjs.org/
+53 silly mapToRegistry data Result {
+53 silly mapToRegistry   raw: 'react-pdf',
+53 silly mapToRegistry   scope: null,
+53 silly mapToRegistry   name: 'react-pdf',
+53 silly mapToRegistry   rawSpec: '',
+53 silly mapToRegistry   spec: 'latest',
+53 silly mapToRegistry   type: 'tag' }
+54 silly mapToRegistry uri https://registry.npmjs.org/react-pdf
+55 verbose addNameRange registry:https://registry.npmjs.org/react-pdf not in flight; fetching
+56 verbose already installed skipping reactify@^1.1.1 /Users/david/Sites/up_decision_aid
+57 verbose already installed skipping validator@^6.1.0 /Users/david/Sites/up_decision_aid
+58 verbose already installed skipping rc-slider@^5.3.5 /Users/david/Sites/up_decision_aid
+59 verbose already installed skipping gulp@^3.8.8 /Users/david/Sites/up_decision_aid
+60 verbose already installed skipping gulp-browserify@^0.5.1 /Users/david/Sites/up_decision_aid
+61 verbose already installed skipping gulp-react@^3.1.0 /Users/david/Sites/up_decision_aid
+62 verbose already installed skipping gulp-webserver@^0.8.8 /Users/david/Sites/up_decision_aid
+63 verbose already installed skipping jshint-stylish@^1.0.0 /Users/david/Sites/up_decision_aid
+64 verbose request uri https://registry.npmjs.org/react-pdf
+65 verbose request no auth needed
+66 info attempt registry request try #1 at 2:56:47 PM
+67 verbose request id b42f9a90b55acb2b
+68 verbose etag W/"569fe7bd-37c9"
+69 verbose lastModified Wed, 20 Jan 2016 20:02:05 GMT
+70 http request GET https://registry.npmjs.org/react-pdf
+71 http 304 https://registry.npmjs.org/react-pdf
+72 verbose headers { date: 'Fri, 16 Dec 2016 19:56:47 GMT',
+72 verbose headers   via: '1.1 varnish',
+72 verbose headers   'cache-control': 'max-age=300',
+72 verbose headers   etag: 'W/"569fe7bd-37c9"',
+72 verbose headers   age: '119',
+72 verbose headers   connection: 'keep-alive',
+72 verbose headers   'x-served-by': 'cache-bos8226-BOS',
+72 verbose headers   'x-cache': 'HIT',
+72 verbose headers   'x-cache-hits': '1',
+72 verbose headers   'x-timer': 'S1481918207.724480,VS0,VE0',
+72 verbose headers   vary: 'Accept-Encoding' }
+73 silly get cb [ 304,
+73 silly get   { date: 'Fri, 16 Dec 2016 19:56:47 GMT',
+73 silly get     via: '1.1 varnish',
+73 silly get     'cache-control': 'max-age=300',
+73 silly get     etag: 'W/"569fe7bd-37c9"',
+73 silly get     age: '119',
+73 silly get     connection: 'keep-alive',
+73 silly get     'x-served-by': 'cache-bos8226-BOS',
+73 silly get     'x-cache': 'HIT',
+73 silly get     'x-cache-hits': '1',
+73 silly get     'x-timer': 'S1481918207.724480,VS0,VE0',
+73 silly get     vary: 'Accept-Encoding' } ]
+74 verbose etag https://registry.npmjs.org/react-pdf from cache
+75 verbose get saving react-pdf to /Users/david/.npm/registry.npmjs.org/react-pdf/.cache.json
+76 verbose correctMkdir /Users/david/.npm correctMkdir not in flight; initializing
+77 silly addNameRange number 2 { name: 'react-pdf', range: '>=0.0.10 <0.0.11', hasData: true }
+78 silly addNameRange versions [ 'react-pdf',
+78 silly addNameRange   [ '0.0.1',
+78 silly addNameRange     '0.0.2',
+78 silly addNameRange     '0.0.3',
+78 silly addNameRange     '0.0.4',
+78 silly addNameRange     '0.0.5',
+78 silly addNameRange     '0.0.6',
+78 silly addNameRange     '0.0.7',
+78 silly addNameRange     '0.0.8',
+78 silly addNameRange     '0.0.9',
+78 silly addNameRange     '0.0.10' ] ]
+79 silly addNamed react-pdf@0.0.10
+80 verbose addNamed "0.0.10" is a plain semver version for react-pdf
+81 silly cache afterAdd react-pdf@0.0.10
+82 verbose afterAdd /Users/david/.npm/react-pdf/0.0.10/package/package.json not in flight; writing
+83 verbose correctMkdir /Users/david/.npm correctMkdir not in flight; initializing
+84 verbose afterAdd /Users/david/.npm/react-pdf/0.0.10/package/package.json written
+85 silly install resolved [ { name: 'react-pdf',
+85 silly install resolved     version: '0.0.10',
+85 silly install resolved     description: 'A react component using pdf.js to display pdf documents inline',
+85 silly install resolved     main: 'index.js',
+85 silly install resolved     scripts:
+85 silly install resolved      { test: 'echo "Error: no test specified" && exit 1',
+85 silly install resolved        example: 'browserify -t reactify example/index.js > example/bundle.js' },
+85 silly install resolved     keywords: [ 'pdf', 'react' ],
+85 silly install resolved     author: { name: 'Niklas Närhinen', email: 'niklas@narhinen.net' },
+85 silly install resolved     contributors: [ [Object] ],
+85 silly install resolved     license: 'MIT',
+85 silly install resolved     devDependencies: { browserify: '^11.0.1', reactify: '^1.1.1' },
+85 silly install resolved     peerDependencies: { react: '^0.13.3 || ^0.14', 'react-dom': '^0.13.3 || ^0.14' },
+85 silly install resolved     browserify: { transform: [Object] },
+85 silly install resolved     repository:
+85 silly install resolved      { type: 'git',
+85 silly install resolved        url: 'git+https://github.com/nnarhinen/react-pdf.git' },
+85 silly install resolved     gitHead: 'a6181f0f59291bd537a5dfc708a109926d59dee5',
+85 silly install resolved     bugs: { url: 'https://github.com/nnarhinen/react-pdf/issues' },
+85 silly install resolved     homepage: 'https://github.com/nnarhinen/react-pdf',
+85 silly install resolved     _id: 'react-pdf@0.0.10',
+85 silly install resolved     _shasum: '57b827c03143d7b82eb8b5a3d545703ec39a8764',
+85 silly install resolved     _from: 'react-pdf@>=0.0.10 <0.0.11',
+85 silly install resolved     _npmVersion: '1.4.28',
+85 silly install resolved     _npmUser: { name: 'nnarhinen', email: 'niklas@narhinen.net' },
+85 silly install resolved     maintainers: [ [Object] ],
+85 silly install resolved     dist:
+85 silly install resolved      { shasum: '57b827c03143d7b82eb8b5a3d545703ec39a8764',
+85 silly install resolved        tarball: 'https://registry.npmjs.org/react-pdf/-/react-pdf-0.0.10.tgz' },
+85 silly install resolved     directories: {},
+85 silly install resolved     _resolved: 'https://registry.npmjs.org/react-pdf/-/react-pdf-0.0.10.tgz',
+85 silly install resolved     readme: 'ERROR: No README data found!' } ]
+86 info install react-pdf@0.0.10 into /Users/david/Sites/up_decision_aid
+87 info installOne react-pdf@0.0.10
+88 verbose installOne of react-pdf to /Users/david/Sites/up_decision_aid not in flight; installing
+89 verbose correctMkdir /Users/david/.npm/_locks correctMkdir not in flight; initializing
+90 verbose lock using /Users/david/.npm/_locks/react-pdf-0f721b255f36202a.lock for /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+91 silly install write writing react-pdf 0.0.10 to /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+92 verbose unbuild node_modules/react-pdf
+93 silly gentlyRm /Users/david/Sites/up_decision_aid/node_modules/react-pdf is being purged from base /Users/david/Sites/up_decision_aid
+94 verbose gentlyRm don't care about contents; nuking /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+95 silly vacuum-fs purging /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+96 silly vacuum-fs quitting because other entries in /Users/david/Sites/up_decision_aid/node_modules
+97 verbose tar unpack /Users/david/.npm/react-pdf/0.0.10/package.tgz
+98 verbose tar unpacking to /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+99 silly gentlyRm /Users/david/Sites/up_decision_aid/node_modules/react-pdf is being purged
+100 verbose gentlyRm don't care about contents; nuking /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+101 silly gunzTarPerm modes [ '755', '644' ]
+102 silly gunzTarPerm extractEntry package.json
+103 silly gunzTarPerm extractEntry .npmignore
+104 silly gunzTarPerm extractEntry README.md
+105 silly gunzTarPerm extractEntry LICENSE
+106 silly gunzTarPerm extractEntry index.js
+107 silly gunzTarPerm extractEntry example/bundle.js
+108 silly gunzTarPerm extractEntry example/index.js
+109 silly gunzTarPerm extractEntry example/example.pdf
+110 silly gunzTarPerm extractEntry example/index.html
+111 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/LICENCE
+112 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/build/pdf.js
+113 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/build/pdf.worker.js
+114 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/compatibility.js
+115 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/debugger.js
+116 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/l10n.js
+117 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/viewer.js
+118 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/LICENSE
+119 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBpc-EUC-H.bcmap
+120 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78-H.bcmap
+121 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78-RKSJ-H.bcmap
+122 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78-RKSJ-V.bcmap
+123 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78-V.bcmap
+124 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78ms-RKSJ-H.bcmap
+125 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78ms-RKSJ-V.bcmap
+126 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/83pv-RKSJ-H.bcmap
+127 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/90ms-RKSJ-H.bcmap
+128 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/90ms-RKSJ-V.bcmap
+129 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/90msp-RKSJ-H.bcmap
+130 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/90msp-RKSJ-V.bcmap
+131 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/90pv-RKSJ-H.bcmap
+132 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/90pv-RKSJ-V.bcmap
+133 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Add-H.bcmap
+134 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Add-RKSJ-H.bcmap
+135 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Add-RKSJ-V.bcmap
+136 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Add-V.bcmap
+137 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-0.bcmap
+138 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-1.bcmap
+139 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-2.bcmap
+140 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-3.bcmap
+141 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-4.bcmap
+142 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-5.bcmap
+143 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-6.bcmap
+144 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-CNS1-UCS2.bcmap
+145 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-GB1-0.bcmap
+146 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-GB1-1.bcmap
+147 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-GB1-2.bcmap
+148 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-GB1-3.bcmap
+149 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-GB1-4.bcmap
+150 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-GB1-5.bcmap
+151 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-GB1-UCS2.bcmap
+152 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-0.bcmap
+153 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-1.bcmap
+154 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-2.bcmap
+155 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-3.bcmap
+156 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-4.bcmap
+157 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-5.bcmap
+158 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-6.bcmap
+159 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Japan1-UCS2.bcmap
+160 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Korea1-0.bcmap
+161 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Korea1-1.bcmap
+162 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Korea1-2.bcmap
+163 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Adobe-Korea1-UCS2.bcmap
+164 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/B5-H.bcmap
+165 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/B5-V.bcmap
+166 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/B5pc-H.bcmap
+167 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/B5pc-V.bcmap
+168 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/CNS-EUC-H.bcmap
+169 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/CNS-EUC-V.bcmap
+170 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/CNS1-H.bcmap
+171 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/CNS1-V.bcmap
+172 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/CNS2-H.bcmap
+173 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/CNS2-V.bcmap
+174 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/ETHK-B5-H.bcmap
+175 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/ETHK-B5-V.bcmap
+176 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/ETen-B5-H.bcmap
+177 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/ETen-B5-V.bcmap
+178 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/ETenms-B5-H.bcmap
+179 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/ETenms-B5-V.bcmap
+180 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/EUC-H.bcmap
+181 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/EUC-V.bcmap
+182 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Ext-H.bcmap
+183 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Ext-RKSJ-H.bcmap
+184 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Ext-RKSJ-V.bcmap
+185 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Ext-V.bcmap
+186 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GB-EUC-H.bcmap
+187 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GB-EUC-V.bcmap
+188 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GB-H.bcmap
+189 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GB-V.bcmap
+190 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBK-EUC-H.bcmap
+191 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBK-EUC-V.bcmap
+192 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBK2K-H.bcmap
+193 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBK2K-V.bcmap
+194 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBKp-EUC-H.bcmap
+195 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBKp-EUC-V.bcmap
+196 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBT-EUC-H.bcmap
+197 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBT-EUC-V.bcmap
+198 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBT-H.bcmap
+199 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBT-V.bcmap
+200 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBTpc-EUC-H.bcmap
+201 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBTpc-EUC-V.bcmap
+202 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78-EUC-V.bcmap
+203 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/GBpc-EUC-V.bcmap
+204 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/H.bcmap
+205 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKdla-B5-H.bcmap
+206 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKdla-B5-V.bcmap
+207 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKdlb-B5-H.bcmap
+208 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKdlb-B5-V.bcmap
+209 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKgccs-B5-H.bcmap
+210 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKgccs-B5-V.bcmap
+211 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKm314-B5-H.bcmap
+212 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKm314-B5-V.bcmap
+213 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKm471-B5-H.bcmap
+214 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKm471-B5-V.bcmap
+215 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKscs-B5-H.bcmap
+216 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/HKscs-B5-V.bcmap
+217 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Hankaku.bcmap
+218 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Hiragana.bcmap
+219 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSC-EUC-H.bcmap
+220 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSC-EUC-V.bcmap
+221 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSC-H.bcmap
+222 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSC-Johab-H.bcmap
+223 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSC-Johab-V.bcmap
+224 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSC-V.bcmap
+225 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSCms-UHC-H.bcmap
+226 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSCms-UHC-HW-H.bcmap
+227 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSCms-UHC-HW-V.bcmap
+228 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSCms-UHC-V.bcmap
+229 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSCpc-EUC-H.bcmap
+230 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/KSCpc-EUC-V.bcmap
+231 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Katakana.bcmap
+232 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/78-EUC-H.bcmap
+233 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/NWP-H.bcmap
+234 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/NWP-V.bcmap
+235 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/RKSJ-H.bcmap
+236 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/RKSJ-V.bcmap
+237 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/Roman.bcmap
+238 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UCS2-H.bcmap
+239 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UCS2-V.bcmap
+240 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UTF16-H.bcmap
+241 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UTF16-V.bcmap
+242 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UTF32-H.bcmap
+243 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UTF32-V.bcmap
+244 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UTF8-H.bcmap
+245 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniCNS-UTF8-V.bcmap
+246 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UCS2-H.bcmap
+247 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UCS2-V.bcmap
+248 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UTF16-H.bcmap
+249 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UTF16-V.bcmap
+250 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UTF32-H.bcmap
+251 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UTF32-V.bcmap
+252 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UTF8-H.bcmap
+253 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniGB-UTF8-V.bcmap
+254 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UCS2-H.bcmap
+255 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UCS2-HW-H.bcmap
+256 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UCS2-HW-V.bcmap
+257 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UCS2-V.bcmap
+258 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UTF16-H.bcmap
+259 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UTF16-V.bcmap
+260 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UTF32-H.bcmap
+261 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UTF32-V.bcmap
+262 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UTF8-H.bcmap
+263 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS-UTF8-V.bcmap
+264 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS2004-UTF16-H.bcmap
+265 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS2004-UTF16-V.bcmap
+266 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS2004-UTF32-H.bcmap
+267 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS2004-UTF32-V.bcmap
+268 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS2004-UTF8-H.bcmap
+269 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJIS2004-UTF8-V.bcmap
+270 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJISPro-UCS2-HW-V.bcmap
+271 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJISPro-UCS2-V.bcmap
+272 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJISPro-UTF8-V.bcmap
+273 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJISX0213-UTF32-H.bcmap
+274 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJISX0213-UTF32-V.bcmap
+275 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJISX02132004-UTF32-H.bcmap
+276 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniJISX02132004-UTF32-V.bcmap
+277 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UCS2-H.bcmap
+278 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UCS2-V.bcmap
+279 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UTF16-H.bcmap
+280 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UTF16-V.bcmap
+281 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UTF32-H.bcmap
+282 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UTF32-V.bcmap
+283 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UTF8-H.bcmap
+284 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/UniKS-UTF8-V.bcmap
+285 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/V.bcmap
+286 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/cmaps/WP-Symbol.bcmap
+287 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/compressed.tracemonkey-pldi-09.pdf
+288 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-download@2x.png
+289 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-check.svg
+290 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-help.svg
+291 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-insert.svg
+292 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-key.svg
+293 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-newparagraph.svg
+294 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-noicon.svg
+295 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-note.svg
+296 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-paragraph.svg
+297 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-next-rtl.png
+298 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-next-rtl@2x.png
+299 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-next.png
+300 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-next@2x.png
+301 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-previous-rtl.png
+302 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-previous-rtl@2x.png
+303 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-previous.png
+304 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/findbarButton-previous@2x.png
+305 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/grab.cur
+306 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/grabbing.cur
+307 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/loading-icon.gif
+308 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/loading-small.png
+309 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/loading-small@2x.png
+310 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-documentProperties.png
+311 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-documentProperties@2x.png
+312 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-firstPage.png
+313 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-firstPage@2x.png
+314 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-handTool.png
+315 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-handTool@2x.png
+316 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-lastPage.png
+317 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-lastPage@2x.png
+318 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-rotateCcw.png
+319 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-rotateCcw@2x.png
+320 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-rotateCw.png
+321 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/secondaryToolbarButton-rotateCw@2x.png
+322 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/shadow.png
+323 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/texture.png
+324 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-bookmark.png
+325 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-bookmark@2x.png
+326 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-download.png
+327 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/annotation-comment.svg
+328 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-menuArrows.png
+329 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-menuArrows@2x.png
+330 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-openFile.png
+331 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-openFile@2x.png
+332 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageDown-rtl.png
+333 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageDown-rtl@2x.png
+334 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageDown.png
+335 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageDown@2x.png
+336 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageUp-rtl.png
+337 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageUp-rtl@2x.png
+338 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageUp.png
+339 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-pageUp@2x.png
+340 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-presentationMode.png
+341 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-presentationMode@2x.png
+342 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-print.png
+343 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-print@2x.png
+344 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-search.png
+345 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-search@2x.png
+346 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-secondaryToolbarToggle-rtl.png
+347 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-secondaryToolbarToggle-rtl@2x.png
+348 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-secondaryToolbarToggle.png
+349 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-secondaryToolbarToggle@2x.png
+350 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-sidebarToggle-rtl.png
+351 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-sidebarToggle-rtl@2x.png
+352 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-sidebarToggle.png
+353 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-sidebarToggle@2x.png
+354 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewAttachments.png
+355 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewAttachments@2x.png
+356 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewOutline-rtl.png
+357 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewOutline-rtl@2x.png
+358 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewOutline.png
+359 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewOutline@2x.png
+360 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewThumbnail.png
+361 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-viewThumbnail@2x.png
+362 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-zoomIn.png
+363 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-zoomIn@2x.png
+364 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-zoomOut.png
+365 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/images/toolbarButton-zoomOut@2x.png
+366 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/kn/viewer.properties
+367 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ach/viewer.properties
+368 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ak/viewer.properties
+369 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/an/viewer.properties
+370 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ar/viewer.properties
+371 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/as/viewer.properties
+372 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ast/viewer.properties
+373 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/az/viewer.properties
+374 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/be/viewer.properties
+375 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/bg/viewer.properties
+376 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/bn-BD/viewer.properties
+377 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/bn-IN/viewer.properties
+378 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/br/viewer.properties
+379 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/bs/viewer.properties
+380 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ca/viewer.properties
+381 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/cs/viewer.properties
+382 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/csb/viewer.properties
+383 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/cy/viewer.properties
+384 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/da/viewer.properties
+385 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/de/viewer.properties
+386 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/el/viewer.properties
+387 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/en-GB/viewer.properties
+388 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/en-US/viewer.properties
+389 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/en-ZA/viewer.properties
+390 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/eo/viewer.properties
+391 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/es-AR/viewer.properties
+392 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/es-CL/viewer.properties
+393 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/es-ES/viewer.properties
+394 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/es-MX/viewer.properties
+395 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/et/viewer.properties
+396 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/eu/viewer.properties
+397 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/fa/viewer.properties
+398 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ff/viewer.properties
+399 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/fi/viewer.properties
+400 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/fr/viewer.properties
+401 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/fy-NL/viewer.properties
+402 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ga-IE/viewer.properties
+403 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/gd/viewer.properties
+404 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/gl/viewer.properties
+405 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/gu-IN/viewer.properties
+406 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/he/viewer.properties
+407 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/hi-IN/viewer.properties
+408 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/hr/viewer.properties
+409 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/hu/viewer.properties
+410 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/hy-AM/viewer.properties
+411 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/id/viewer.properties
+412 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/is/viewer.properties
+413 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/it/viewer.properties
+414 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ja/viewer.properties
+415 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ka/viewer.properties
+416 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/kk/viewer.properties
+417 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/km/viewer.properties
+418 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/af/viewer.properties
+419 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ko/viewer.properties
+420 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ku/viewer.properties
+421 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/lg/viewer.properties
+422 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/lij/viewer.properties
+423 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/locale.properties
+424 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/lt/viewer.properties
+425 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/lv/viewer.properties
+426 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/mai/viewer.properties
+427 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/mk/viewer.properties
+428 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ml/viewer.properties
+429 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/mn/viewer.properties
+430 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/mr/viewer.properties
+431 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ms/viewer.properties
+432 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/my/viewer.properties
+433 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/nb-NO/viewer.properties
+434 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/nl/viewer.properties
+435 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/nn-NO/viewer.properties
+436 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/nso/viewer.properties
+437 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/oc/viewer.properties
+438 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/or/viewer.properties
+439 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/pa-IN/viewer.properties
+440 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/pl/viewer.properties
+441 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/pt-BR/viewer.properties
+442 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/pt-PT/viewer.properties
+443 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/rm/viewer.properties
+444 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ro/viewer.properties
+445 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ru/viewer.properties
+446 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/rw/viewer.properties
+447 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/sah/viewer.properties
+448 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/si/viewer.properties
+449 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/sk/viewer.properties
+450 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/sl/viewer.properties
+451 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/son/viewer.properties
+452 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/sq/viewer.properties
+453 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/sr/viewer.properties
+454 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/sv-SE/viewer.properties
+455 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/sw/viewer.properties
+456 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ta/viewer.properties
+457 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ta-LK/viewer.properties
+458 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/te/viewer.properties
+459 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/th/viewer.properties
+460 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/tl/viewer.properties
+461 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/tn/viewer.properties
+462 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/tr/viewer.properties
+463 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/uk/viewer.properties
+464 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/ur/viewer.properties
+465 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/vi/viewer.properties
+466 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/wo/viewer.properties
+467 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/xh/viewer.properties
+468 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/zh-CN/viewer.properties
+469 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/zh-TW/viewer.properties
+470 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/locale/zu/viewer.properties
+471 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/viewer.css
+472 silly gunzTarPerm extractEntry example/pdfjs-1.1.114-dist/web/viewer.html
+473 verbose write writing to /Users/david/Sites/up_decision_aid/node_modules/react-pdf/package.json
+474 info preinstall react-pdf@0.0.10
+475 verbose readDependencies loading dependencies from /Users/david/Sites/up_decision_aid/node_modules/react-pdf/package.json
+476 silly prepareForInstallMany adding react@^0.13.3 || ^0.14 from react-pdf peerDependencies
+477 silly prepareForInstallMany adding react-dom@^0.13.3 || ^0.14 from react-pdf peerDependencies
+478 warn peerDependencies The peer dependency react@^0.13.3 || ^0.14 included from react-pdf will no
+479 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+480 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+481 warn peerDependencies The peer dependency react-dom@^0.13.3 || ^0.14 included from react-pdf will no
+482 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+483 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+484 verbose readDependencies loading dependencies from /Users/david/Sites/up_decision_aid/node_modules/react-pdf/package.json
+485 silly install resolved []
+486 verbose about to build /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+487 info build /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+488 info linkStuff react-pdf@0.0.10
+489 silly linkStuff react-pdf@0.0.10 has /Users/david/Sites/up_decision_aid/node_modules as its parent node_modules
+490 verbose linkBins react-pdf@0.0.10
+491 verbose linkMans react-pdf@0.0.10
+492 verbose rebuildBundles react-pdf@0.0.10
+493 info install react-pdf@0.0.10
+494 info postinstall react-pdf@0.0.10
+495 verbose readDependencies loading dependencies from /Users/david/Sites/up_decision_aid/package.json
+496 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/classnames/package.json
+497 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp/package.json
+498 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-browserify/package.json
+499 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-react/package.json
+500 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/gulp-webserver/package.json
+501 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/jshint-stylish/package.json
+502 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/lodash/package.json
+503 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/rc-slider/package.json
+504 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react/package.json
+505 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react-dom/package.json
+506 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react-pdf/package.json
+507 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/react-validation/package.json
+508 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/reactify/package.json
+509 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/validator/package.json
+510 verbose targetResolver reading package data from /Users/david/Sites/up_decision_aid/node_modules/.bin/gulp/package.json
+511 verbose already installed skipping react-dom@^0.13.3 || ^0.14 /Users/david/Sites/up_decision_aid
+512 verbose already installed skipping react@^0.13.3 || ^0.14 /Users/david/Sites/up_decision_aid
+513 silly install resolved []
+514 verbose unlock done using /Users/david/.npm/_locks/react-pdf-0f721b255f36202a.lock for /Users/david/Sites/up_decision_aid/node_modules/react-pdf
+515 info build /Users/david/Sites/up_decision_aid
+516 info linkStuff up_decision_aid@1.0.0
+517 silly linkStuff up_decision_aid@1.0.0 has /Users/david/Sites as its parent node_modules
+518 verbose linkBins up_decision_aid@1.0.0
+519 verbose linkMans up_decision_aid@1.0.0
+520 verbose rebuildBundles up_decision_aid@1.0.0
+521 verbose rebuildBundles [ '.bin',
+521 verbose rebuildBundles   'classnames',
+521 verbose rebuildBundles   'gulp',
+521 verbose rebuildBundles   'gulp-browserify',
+521 verbose rebuildBundles   'gulp-react',
+521 verbose rebuildBundles   'gulp-webserver',
+521 verbose rebuildBundles   'jshint-stylish',
+521 verbose rebuildBundles   'lodash',
+521 verbose rebuildBundles   'rc-slider',
+521 verbose rebuildBundles   'react',
+521 verbose rebuildBundles   'react-dom',
+521 verbose rebuildBundles   'react-pdf',
+521 verbose rebuildBundles   'react-validation',
+521 verbose rebuildBundles   'reactify',
+521 verbose rebuildBundles   'validator' ]
+522 verbose rebuild bundle /Users/david/Sites/up_decision_aid/node_modules/classnames
+523 info build /Users/david/Sites/up_decision_aid/node_modules/classnames
+524 info preinstall classnames@2.2.5
+525 info linkStuff classnames@2.2.5
+526 silly linkStuff classnames@2.2.5 has /Users/david/Sites/up_decision_aid/node_modules as its parent node_modules
+527 verbose linkBins classnames@2.2.5
+528 verbose linkMans classnames@2.2.5
+529 verbose rebuildBundles classnames@2.2.5
+530 info install classnames@2.2.5
+531 info postinstall classnames@2.2.5
+532 verbose rebuild bundle /Users/david/Sites/up_decision_aid/node_modules/react-validation
+533 info build /Users/david/Sites/up_decision_aid/node_modules/react-validation
+534 info preinstall react-validation@2.10.9
+535 info linkStuff react-validation@2.10.9
+536 silly linkStuff react-validation@2.10.9 has /Users/david/Sites/up_decision_aid/node_modules as its parent node_modules
+537 verbose linkBins react-validation@2.10.9
+538 verbose linkMans react-validation@2.10.9
+539 verbose rebuildBundles react-validation@2.10.9
+540 info install react-validation@2.10.9
+541 info postinstall react-validation@2.10.9
+542 info install up_decision_aid@1.0.0
+543 info postinstall up_decision_aid@1.0.0
+544 info prepublish up_decision_aid@1.0.0
+545 verbose validateInstall loading /Users/david/Sites/up_decision_aid/package.json for validation
+546 verbose stack Error: The package react-dom@15.3.2 does not satisfy its siblings' peerDependencies requirements!
+546 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+546 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+546 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+546 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+546 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+546 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+546 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+546 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+546 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+546 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+547 verbose cwd /Users/david/Sites/up_decision_aid
+548 error Darwin 15.6.0
+549 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+550 error node v4.5.0
+551 error npm  v2.15.9
+552 error code EPEERINVALID
+553 error peerinvalid The package react-dom@15.3.2 does not satisfy its siblings' peerDependencies requirements!
+553 error peerinvalid Peer react-pdf@0.0.10 wants react-dom@^0.13.3 || ^0.14
+554 verbose exit [ 1, true ]
