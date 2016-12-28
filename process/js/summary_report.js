@@ -15,10 +15,9 @@ var SummaryReport = React.createClass({
       count: 0
     }
   },
-
   createPdf: function () {
-    var body = jQuery('body');
-    html2canvas(body).then( function (canvas) {
+    var app = jQuery('#up-app');
+    html2canvas(app).then( function (canvas) {
       var img = canvas.toDataURL("image/png");
       var pdf = new jsPDF("p", "pt", "letter");
       pdf.addImage(img, "JPEG", 20, 20);
@@ -26,7 +25,13 @@ var SummaryReport = React.createClass({
     });
   },
 
+/*
+  createPdf: function () {
+    var app = jQuery('#up-app');
+    console.log(app[0].innerHTML);
+  },
 
+*/
   handleClickAction: function (id) {
     if (id === 'print-summary') {
       window.print();
