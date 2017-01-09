@@ -19,6 +19,7 @@ function StepsMixin (path) {
       //if (e.target.id === "next" || e.target.id === "back" || e.target.id === "finish") {
       if (e.target.tagName === "BUTTON") {
         this.handleClickAction(e.target.id);
+        jQuery('html, body').animate({ scrollTop: 0 }, "slow");
       }
       return;
     },

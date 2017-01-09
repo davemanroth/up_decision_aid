@@ -44,7 +44,6 @@ var YourValues = React.createClass({
         <p className="prep-instructions">For each question, click on the blue circle and slide it to the place on the line (from 0 to 10) that fits your answer. </p>
         <div className="row">
           <div className="col-md-10 col-md-push-1">
-            <SliderScale />
             <div className="slider-questions-container">
               { this.state.questionData.map( function (entry, idx) {
                 return (
@@ -59,6 +58,7 @@ var YourValues = React.createClass({
                 );
               }.bind(this))}
             </div>
+            <SliderScale />
           </div>
         </div>
       </div>
