@@ -17,10 +17,13 @@ var SummaryReport = React.createClass({
   },
 
   createPdf: function () {
+  /*
     var app = document.getElementById('up-app');
     var pdf = new jsPDF('p', 'pt', 'letter');
     pdf.fromHTML(app);
     pdf.save('your_summary.pdf');
+  */
+    return null;
   },
 
 /*
