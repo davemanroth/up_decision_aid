@@ -8,7 +8,6 @@ var UpDecisionAid = React.createClass({
   getInitialState: function () {
     return {
       currentStep: 0,
-      notes: null
     };
   },
 
@@ -21,8 +20,6 @@ var UpDecisionAid = React.createClass({
       currentStep: nextStep
     });
   },
-
-
 
   render: function () {
     return (
