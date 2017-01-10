@@ -1,19 +1,20 @@
 var gulp = require('gulp'),
-    browserify = require('gulp-browserify'),
+    babelify = require('babelify'),
+    browserify = require('browserify'),
+    browserifyshim = require('browserify-shim'),
+    uglify = require('gulp-uglify'),
     webserver = require('gulp-webserver');
     
 var src = './process',
     app = './builds/app';
 
 gulp.task('js', function() {
-  return gulp.src( src + '/js/up_app.js' )
-    .pipe(browserify({
-      transform: 'reactify',
-      debug: true
-    }))
-    .on('error', function (err) {
-      console.error('Error!', err.message);
-    })
+  return browserify({ debug: true })
+    .transform(babelify, { presets: ['es2015', 'react'] })
+    .transform(browserifyshim)
+    .bundle()
+    .pipe(gulp.src( src + '/js/up_app.js' ))
+    uglify()
     .pipe(gulp.dest(app + '/js'));
 });
 

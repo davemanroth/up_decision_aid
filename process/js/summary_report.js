@@ -5,7 +5,7 @@ var SliderQuestion = require('./slider_question');
 var SliderScale = require('./slider_scale');
 var StepsMixin = require('./steps_mixin');
 //var html2canvas = require('html2canvas');
-var jsPDF = require('jspdf');
+//var jsPDF = require('jspdf');
 
 var SummaryReport = React.createClass({
   mixins: [StepsMixin(false)],
