@@ -36,7 +36,13 @@ var AssessmentMixin = {
       }
     };
 
-    if (score >= 0 && score < 3) {
+    if (score === 0) {
+      results.prep.circles = 0;
+      results.prep.numMen = 0;
+      results.prep.hivNeg = 100;
+    }
+
+    else if (score > 0 && score < 3) {
       results.noPrep.circles = 1;
       results.noPrep.numMen = 1;
     }
