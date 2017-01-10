@@ -1,5 +1,7 @@
 var gulp = require('gulp'),
     babelify = require('babelify'),
+    source = require('vinyl-source-stream'),
+    buffer = require('vinyl-buffer'),
     browserify = require('browserify'),
     browserifyshim = require('browserify-shim'),
     uglify = require('gulp-uglify'),
@@ -9,13 +11,14 @@ var src = './process',
     app = './builds/app';
 
 gulp.task('js', function() {
-  return browserify({ debug: true })
+  return browserify({ entries: src + '/js/up_app.js', debug: true })
     .transform(babelify, { presets: ['es2015', 'react'] })
     .transform(browserifyshim)
     .bundle()
-    .pipe(gulp.src( src + '/js/up_app.js' ))
-    uglify()
-    .pipe(gulp.dest(app + '/js'));
+    .pipe( source( 'up_app.js' ))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest(app + '/js/'));
 });
 
 gulp.task('html', function() {

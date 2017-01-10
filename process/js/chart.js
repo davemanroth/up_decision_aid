@@ -1,4 +1,4 @@
-var React = require('react');
+var React = require("react");
 const COLS = 10;
 
 var Chart = React.createClass({
@@ -49,9 +49,9 @@ var Chart = React.createClass({
         else {
           extraClass = " border";
         }
-        col.push(React.createElement('span', { key: 'row' + i + 'col' + j, className: "chart-circle" + extraClass }, null));
+        col.push(React.createElement("span", { key: "row" + i + "col" + j, className: "chart-circle" + extraClass }, null));
       }
-      row = React.createElement('div', { key: 'row' + i,  className: "chart-row" }, col);
+      var row = React.createElement("div", { key: "row" + i,  className: "chart-row" }, col);
       chart.push(row);
     }
     return chart;
