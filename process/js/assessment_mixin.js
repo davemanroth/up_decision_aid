@@ -38,7 +38,6 @@ var AssessmentMixin = {
   are zero, change the score to 1 so it will register in the getResults
   method
 */
-    
     return score > 1 ? score : 1;
   },
 

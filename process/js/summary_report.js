@@ -125,6 +125,7 @@ var SummaryReport = React.createClass({
         rightLimit={ entry.right_limit }
         storedValue= { results[idx] }
         disabled= { true }
+        hasBeenStored= { true }
       />
     );
   },

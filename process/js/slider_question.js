@@ -10,7 +10,7 @@ var SliderQuestion = React.createClass({
   },
 
   componentDidMount: function () {
-    if (this.props.storedValue) {
+    if (this.props.hasBeenStored) {
       this.setState({
         value: this.props.storedValue
       });
