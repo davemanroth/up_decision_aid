@@ -1,8 +1,21 @@
 var AssessmentMixin = {
 
+  areAllZeros: function (responses) {
+    return (
+      responses.numPartners === "0" &&
+      responses.withoutCondoms === "0" &&
+      responses.hivPartners === "0" &&
+      !responses.stds.includes("yes")
+    );
+  },
+
   getScore: function () {
     var responses = this.props.responses;
     var score = 0;
+
+    if ( this.areAllZeros(responses) ) {
+      return score;
+    }
 
     if (responses.numPartners >= 10) {
       score += 2;
@@ -20,7 +33,13 @@ var AssessmentMixin = {
       score += 2;
     }
 
-    return score;
+/* 
+  Because we want to yield a score of zero only if all responses
+  are zero, change the score to 1 so it will register in the getResults
+  method
+*/
+    
+    return score > 1 ? score : 1;
   },
 
   getResults: function (score) {

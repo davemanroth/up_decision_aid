@@ -1,6 +1,6 @@
 var React = require('react');
 var StepsMixin = require('./steps_mixin');
-const NEXT_STEPS_DATA = './js/next_steps_question.json';
+const NEXT_STEPS_DATA = 'next_steps_question.json';
 
 var NextSteps = React.createClass({
   mixins: [StepsMixin(NEXT_STEPS_DATA)],
@@ -9,21 +9,34 @@ var NextSteps = React.createClass({
     return {
       questionData: [],
       response: null,
-      choice: null
+      choice: null,
+      otherClass: "hidden"
     };
   },
 
   handleClickAction: function (id) {
     var idx = this.state.choice;
-    var response = this.state.questionData[0].choices[idx];
+    var response = '';
+    if ( this.isOtherChoice(idx) ) {
+      response = this.refs.otherText.value;
+    }
+    else {
+      response = this.state.questionData[0].choices[idx];
+    }
     this.props.submitData(response);
   },
 
   handleRadio: function (e) {
     var choice = e.target.value;
+    var visibility = ( this.isOtherChoice(choice) ? "show" : "hidden" );
     this.setState({
-      choice: choice
+      choice: choice,
+      otherClass: visibility
     });
+  },
+
+  isOtherChoice: function (id) {
+    return id === "4";
   },
 
   storeData: function (data) {
@@ -54,6 +67,9 @@ var NextSteps = React.createClass({
                   </div>
                 );
             }.bind(this))}
+          </div>
+          <div className={ this.state.otherClass }>
+            <input type="text" ref="otherText" className="form-control text-input" />
           </div>
         </div>
       </div>

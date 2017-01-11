@@ -2,7 +2,7 @@ var React = require('react');
 var SliderQuestion = require('./slider_question');
 var StepsMixin = require('./steps_mixin');
 var SliderScale = require('./slider_scale');
-const VALUES_DATA = './js/values_questions.json';
+const VALUES_DATA = 'values_questions.json';
 
 var YourValues = React.createClass({
   mixins: [StepsMixin(VALUES_DATA)],

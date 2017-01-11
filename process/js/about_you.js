@@ -2,7 +2,7 @@ var React = require('react');
 var StepsMixin = require('./steps_mixin');
 var Validation = require('./validation_mixin');
 var ErrorMessage = require('./error_message');
-const ABOUT_DATA = './js/about_you_questions.json';
+const ABOUT_DATA = 'about_you_questions.json';
 
 var AboutYou = React.createClass({
   mixins: [StepsMixin(ABOUT_DATA), Validation],
@@ -30,17 +30,23 @@ var AboutYou = React.createClass({
     var rendered = [];
     choices.map( function(choice, idx) {
       rendered.push(
-        <div key= { idx } className= { errors ? "has-error"  : "" }>
-          <label className="radio-inline">
-            <span>{ choice }</span>
-          </label>
-          <label className="radio-inline">
-            <input onChange= { this.handleRadios } type="radio" name={ idx } value="yes" checked={ this.state.stds[idx] === "yes" } /> Yes
-          </label>
-          <label className="radio-inline">
-            <input onChange= { this.handleRadios } type="radio" name={ idx } value="no" checked={ this.state.stds[idx] === "no" } /> No
-          </label>
-        </div>
+        <tr key={ idx} className= { errors ? "has-error"  : "" }>
+          <td>
+            <label className="radio-inline">
+              <span>{ choice }</span>
+            </label>
+          </td>
+          <td>
+            <label className="radio-inline">
+              <input onChange= { this.handleRadios } type="radio" name={ idx } value="yes" checked={ this.state.stds[idx] === "yes" } /> Yes
+            </label>
+          </td>
+          <td>
+            <label className="radio-inline">
+              <input onChange= { this.handleRadios } type="radio" name={ idx } value="no" checked={ this.state.stds[idx] === "no" } /> No
+            </label>
+          </td>
+        </tr>
       );
     }.bind(this));
     return rendered;
@@ -107,7 +113,11 @@ var AboutYou = React.createClass({
                       <ErrorMessage 
                         errors= { errors[idx] ? errors[idx] : null } 
                       />
-                      { radios }
+                      <table className="table std-table">
+                        <tbody>
+                          { radios }
+                        </tbody>
+                      </table>
                     </li>
                   </div>
                 );

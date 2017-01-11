@@ -6,7 +6,6 @@ var Notes = React.createClass({
 
   handleClickAction: function (id) {
     if (id === "restart") {
-      console.log("Reset was clicked");
       this.refs.notes.value = "";
     }
   },
