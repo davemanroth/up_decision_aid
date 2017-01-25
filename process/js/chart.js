@@ -4,12 +4,12 @@ const COLS = 10;
 var Chart = React.createClass({
 
   classesIterator: function (circles) {
-    return Number.isInteger(circles) ? circles : Math.ceil(circles);
+    return this.isInteger(circles) ? circles : Math.ceil(circles);
   },
 
   generateExtraClass: function (count, circles) {
     var extraClass = "";
-    if( !Number.isInteger(circles) && count == 1 ) {
+    if( !this.isInteger(circles) && count == 1 ) {
       extraClass = " filled half-circle";
     }
     else {
@@ -20,6 +20,12 @@ var Chart = React.createClass({
 
   manOrMen: function (number) {
     return number === 1 ? "man" : "men";
+  },
+
+  isInteger: function (value) {
+    return typeof value === "number" &&
+      isFinite(value) &&
+      Math.floor(value) === value;
   },
 
   generateStats: function () {

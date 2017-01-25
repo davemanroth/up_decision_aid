@@ -15,7 +15,7 @@ gulp.task('js', function() {
     .bundle()
     .pipe( source( 'up_app.js' ))
     .pipe(buffer())
-    //.pipe(uglify())
+    .pipe(uglify())
     .pipe(gulp.dest(app + '/js/'));
 });
 

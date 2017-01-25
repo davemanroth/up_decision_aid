@@ -25,10 +25,19 @@ var Validation = {
 		return true;
 	},
 
+  isInArray: function (val, arr) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === val) {
+        return true;
+      }
+    }
+    return false;
+  },
+
   checkIndividualFields: function (data, idx) {
-    var numPartners = Number.parseInt(data.numPartners);
-    var withoutCondoms = Number.parseInt(data.withoutCondoms);
-    var hivPartners = Number.parseInt(data.hivPartners);
+    var numPartners = parseInt(data.numPartners);
+    var withoutCondoms = parseInt(data.withoutCondoms);
+    var hivPartners = parseInt(data.hivPartners);
     switch (idx) {
       case 1:
         if (withoutCondoms > numPartners) {
@@ -46,7 +55,7 @@ var Validation = {
       case 3:
         // Make stds into array again
         var stds = data.stds.split(",");
-        if (stds.length === 3 && !stds.includes(null) && !stds.includes("") ) {
+        if (stds.length === 3 && !this.isInArray(null, stds) && !this.isInArray("", stds) ) {
         // reassign array to Object only if it is valid
           data.stds = stds;
         }

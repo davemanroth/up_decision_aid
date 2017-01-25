@@ -5,8 +5,17 @@ var AssessmentMixin = {
       responses.numPartners === "0" &&
       responses.withoutCondoms === "0" &&
       responses.hivPartners === "0" &&
-      !responses.stds.includes("yes")
+      !this.isInArray("yes", responses.stds)
     );
+  },
+
+  isInArray: function (val, arr) {
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] === val) {
+        return true;
+      }
+    }
+    return false;
   },
 
   getScore: function () {
@@ -29,7 +38,7 @@ var AssessmentMixin = {
       score += 3;
     }
 
-    if ( responses.stds.includes("yes") ) {
+    if ( this.isInArray("yes", responses.stds) ) {
       score += 2;
     }
 

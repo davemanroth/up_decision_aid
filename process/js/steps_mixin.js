@@ -1,6 +1,6 @@
 function StepsMixin (fileName) {
-  const PATH = './js/'
-  //const PATH = 'sites/all/modules/custom/prep_decision_aid/js/'
+  //const PATH = './js/'
+  const PATH = 'sites/all/modules/custom/prep_decision_aid/js/'
 
   var Mixin = {
     componentDidMount: function () {
