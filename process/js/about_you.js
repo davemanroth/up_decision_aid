@@ -100,7 +100,7 @@ var AboutYou = React.createClass({
     return (
       <div className="step1">
         <h1><span className="bolder">Step { this.props.currentStep + 1 }:</span> { this.props.title }</h1>
-        <p className="prep-instructions">Please answer 4 questions about yourself. Some of the questions are personal, but try to answer as honestly as you can to get the best information for making your decision about PrEP. If you are unsure of the answer, give your best guess.</p>
+        <p className="prep-instructions">Please answer 4 questions about yourself. Some of the questions are personal, but try to answer as accurately as you can to get the best information for making your decision about PrEP. If you are unsure of the answer, give your best guess.</p>
         <form className="questions">
           <ol>
             { this.state.questionData.map( function (entry, idx) {

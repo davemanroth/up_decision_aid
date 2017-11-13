@@ -31,6 +31,11 @@
   border: none;
 }
 
+.button-container {
+  display: table;
+  margin: 0 auto;
+}
+
 @media print {
 
   header, nav, footer,

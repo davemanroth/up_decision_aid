@@ -23,23 +23,17 @@ var StepsButtons = React.createClass({
   renderSummaryButtons: function () {
     return (
       <div className="summary-buttons">
-        <div className="row">
-          <div className="col-md-10 col-md-push-1">
-            <SummaryButton
-              name="print-summary"
-              text="Print a summary of your answers and notes"
-            />
-            <SummaryButton
-              name="download-summary"
-              text="Download your answers and notes to save them"
-            />
-          </div>
+        <div className="button-container">
+          <SummaryButton
+            name="print-summary"
+            text="Print a summary of your answers and notes"
+          />
         </div>
-        <p className="italic txt-center">None of your answers will be saved on this website or anywhere else</p>
-        <div className="clearfix">
+        <p className="italic">None of your answers will be saved on this website or anywhere else</p>
+        <div className="button-container">
           <Arrow direction="left" text="Restart" name="restart" />
         </div>
-        <p>This information is not intended to replace the advice of a healthcare provider. We encourage you to talk to your healthcare provider about PrEP and your answers. See our tips for talking to your provider about sexual health and PrEP.</p>
+        <p className="clearfix disclaimer">This information is not intended to replace the advice of a healthcare provider. We encourage you to talk to your healthcare provider about PrEP and your answers. See our tips for talking to your provider about sexual health and PrEP.</p>
       </div>
     );
   },

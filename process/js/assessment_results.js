@@ -37,7 +37,7 @@ var AssessmentResults = React.createClass({
     return (
       <div className="step2">
         <h1><span className="bolder">Step { this.props.currentStep + 1 }:</span><br /> { this.props.title }</h1>
-        <p className="lead-in-text">This is an estimate of your chances of becoming HIV-positive over one year.</p>
+        <p className="lead-in-text">This is an estimate of the chance that you <em>might</em> become HIV-positive over the next year.</p>
         <div className="results-heading">
           <h2>Without PrEP</h2>
           <p>If 100 men who answered like you <strong>are not taking PrEP</strong></p>
@@ -48,7 +48,7 @@ var AssessmentResults = React.createClass({
           hivNeg= { 100 - results.noPrep.numMen } 
         />
         <div className="results-heading">
-          <h2>WithPrEP</h2>
+          <h2>With PrEP</h2>
           <p>If 100 men who answered like you <strong>are taking PrEP</strong></p>
         </div>
         <Chart
@@ -56,6 +56,7 @@ var AssessmentResults = React.createClass({
           numMen= { results.prep.numMen } 
           hivNeg= { results.prep.hivNeg } 
         />
+        <p className="disclaimer"><strong>Important:</strong> This estimate can be affected by how often you miss doses of PrEP. It can also be affected by how frequently you have sex with your partners and whether any HIV-positive partners are taking HIV treatments (which make them less likely to infect others)</p>
       </div>
     );
   }
