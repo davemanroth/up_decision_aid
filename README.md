@@ -11,3 +11,6 @@ The decision aid includes the following components:
 ## Built with
 * React + ES5
 * jQuery (loading JSON data files)
+
+## Finished product
+The UP decision aid can be viewed [here]: (http://understandingprep.org/prep_decision_aid) Username: upuser, password: upuser
