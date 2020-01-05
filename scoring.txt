@@ -1,3 +1,5 @@
+** This file is purely for reference, it is not imported or used in the React application **
+
 Scoring
 
 Q1 >= 10 male partners = 2 pts

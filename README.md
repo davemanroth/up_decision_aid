@@ -8,6 +8,11 @@ The decision aid includes the following components:
 * 5 questions assessing user's values/beliefs
 * A print-friendly summary listing all responses/results from previous questions
 
+## File structure
+* **process/js:** All React components are stored here. Up_app.js is the root component into which all other components are loaded.
+* **builds/app:** Contains directories for css, minified js, and index.html into which minified React app is loaded.
+* **builds/app/js:** Contains minified react files, minified up_app file, and all static text files in JSON format used in the decision aid.
+
 ## Built with
 * React + ES5
 * jQuery (loading JSON data files)
