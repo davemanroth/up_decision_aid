@@ -4,8 +4,6 @@ var Chart = require('./chart');
 var SliderQuestion = require('./slider_question');
 var SliderScale = require('./slider_scale');
 var StepsMixin = require('./steps_mixin');
-//var html2canvas = require('html2canvas');
-//var jsPDF = require('jspdf');
 
 var SummaryReport = React.createClass({
   mixins: [StepsMixin(false)],
@@ -16,33 +14,6 @@ var SummaryReport = React.createClass({
     }
   },
 
-  createPdf: function () {
-  /*
-    var app = document.getElementById('up-app');
-    var pdf = new jsPDF('p', 'pt', 'letter');
-    pdf.fromHTML(app);
-    pdf.save('your_summary.pdf');
-  */
-    return null;
-  },
-
-/*
-  createPdf: function () {
-    var app = jQuery('#up-app');
-    html2canvas(app).then( function (canvas) {
-      var img = canvas.toDataURL("image/png");
-      var pdf = new jsPDF("p", "pt", "letter");
-      pdf.addImage(img, "JPEG", 20, 20);
-      pdf.save('summary.pdf');
-    });
-  },
-
-  createPdf: function () {
-    var app = jQuery('#up-app');
-    console.log(app[0].innerHTML);
-  },
-
-*/
   handleClickAction: function (id) {
     if (id === 'print-summary') {
       window.print();

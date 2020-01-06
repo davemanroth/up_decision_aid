@@ -1,3 +1,14 @@
+/**
+ * Root component for UP decision aid
+ *
+ * Author: Dave Rothfarb
+ * Project: UP Decision aid
+ * Health Communication Core 2017
+ *
+ * This root component keeps track of the user's current step in the decision
+ * aid and renders the primary components: Steps, Notes, and StepsButtons.
+ */
+
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Steps = require('./steps');

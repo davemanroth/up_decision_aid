@@ -1,3 +1,7 @@
+// This simple component displays error messages based on
+// data passed to its props. It must be imported by a 
+// component with user input fields.
+
 var React = require('react');
 
 var ErrorMessage = React.createClass({

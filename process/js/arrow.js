@@ -1,3 +1,7 @@
+// Simple component that renders a button with label
+// text that varies depending on data passed to its 
+// props.
+
 var React = require('react');
 
 var Arrow = React.createClass({

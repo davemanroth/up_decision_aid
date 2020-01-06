@@ -1,3 +1,8 @@
+// This component takes in numerical data through props
+// and produces a matrix of 10 x 10 circles. The number passed
+// in props determines how many of the circles have a fill color.
+// The remaining circles in the matrix are unfilled.
+
 var React = require("react");
 const COLS = 10;
 

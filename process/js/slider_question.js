@@ -1,3 +1,9 @@
+// This component uses a React community-generated component,
+// rc-slider, to render a slider element. Using a number scale
+// from 1-10, it allows a user to click and drag a slider to a 
+// number. This is meant to be imported and used within the YourValues
+// step component.
+
 var React = require('react');
 var Slider = require('rc-slider');
 

@@ -1,3 +1,8 @@
+// This simple component is used within the YourValues
+// component and explains how numerical values from
+// the SliderQuestion component represent support
+// for/against PrEP
+
 var React = require('react');
   
 var SliderScale = React.createClass({

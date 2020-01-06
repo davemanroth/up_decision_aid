@@ -1,3 +1,8 @@
+// This is the AboutYou step component of the decision aid. It asks
+// the user a series of questions about their sexual history and, 
+// with the help of the StepsMixin module, passes the responses to 
+// the parent Steps component. 
+
 var React = require('react');
 var StepsMixin = require('./steps_mixin');
 var Validation = require('./validation_mixin');

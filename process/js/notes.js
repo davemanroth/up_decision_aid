@@ -1,3 +1,7 @@
+// This simple component renders a Notes textarea element
+// where a user can type in notes as he progresses through
+// the decision aid. It appears on every step.
+
 var React = require('react');
 var StepsMixin = require('./steps_mixin');
 

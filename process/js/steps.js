@@ -1,3 +1,16 @@
+/**
+ * This component houses each step of the decision aid. Each step
+ * has its own corresponding component: AboutYou, AssessmentResults,
+ * YourValues, NextSteps, SummaryReport. A switch statement evaluates 
+ * the currentStep prop (passed by up_app parent) and renders the
+ * appropriate step component.
+ *
+ * Stored in the component state are questions to be passed to the appropriate
+ * step component, user responses to step components, and a flag indicating
+ * whether or not the user chose to restart the decision aid, thus clearing
+ * all stored data
+ */
+
 var React = require('react');
 var AboutYou = require('./about_you');
 var AssessmentResults = require('./assessment_results');

@@ -1,3 +1,9 @@
+// This component is loaded after the user completes the 
+// About You step component. Using the AssessmentMixin module to
+// determine a user's HIV risk, it outputs the risk results and
+// renders the Chart component which renders a graphical representation
+// of the risk.
+
 var React = require('react');
 var Chart = require('./chart');
 var StepsMixin = require('./steps_mixin');

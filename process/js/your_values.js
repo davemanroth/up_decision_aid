@@ -1,3 +1,8 @@
+// This is step component presents the user with a series of questions
+// which pertain to certain values. It uses the SliderQuestion component,
+// allowing the user to click and drag a slider to a number
+// representing how strongly he feels about a value.
+
 var React = require('react');
 var SliderQuestion = require('./slider_question');
 var StepsMixin = require('./steps_mixin');

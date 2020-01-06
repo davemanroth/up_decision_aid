@@ -1,3 +1,7 @@
+// This mixin module validates user entered data from the About You component.
+// Along with checking for blanks and type mismatches, it also checks for
+// "realistic" values, predetermined by the study PI.
+
 var React = require('react');
 var Validator = require('validator');
 

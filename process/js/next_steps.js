@@ -1,3 +1,8 @@
+// This is the Next steps portion of the decision aid. As the
+// second-to-last step, it inquires presents the user questions 
+// of what he would like to do next after having completed the
+// previous steps of the decision aid.
+
 var React = require('react');
 var StepsMixin = require('./steps_mixin');
 const NEXT_STEPS_DATA = 'next_steps_question.json';

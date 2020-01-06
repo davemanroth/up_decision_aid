@@ -1,5 +1,8 @@
+// This is a mixin module that holds commonly used functions. It's 
+// imported by specific step components and uses lifecycle methods
+// to load data from JSON files and handle click events.
+
 function StepsMixin (fileName) {
-  //const PATH = './js/'
   const PATH = 'sites/all/modules/custom/prep_decision_aid/js/'
 
   var Mixin = {
@@ -14,11 +17,9 @@ function StepsMixin (fileName) {
 
     componentWillUnmount: function () {
       document.removeEventListener('click', this.handleClick, false);
-      //this.serverReqest.abort();
     },
 
     handleClick: function (e) {
-      //if (e.target.id === "next" || e.target.id === "back" || e.target.id === "finish") {
       if (e.target.tagName === "BUTTON") {
         this.handleClickAction(e.target.id);
         jQuery('html, body').animate({ scrollTop: 0 }, "slow");

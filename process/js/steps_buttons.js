@@ -1,3 +1,7 @@
+// Used in conjunction with the Steps component, this component
+// renders a set of buttons at the bottom of the screen. The buttons' labels
+// and functionality depend on which step of the decision aid the user is.
+
 var React = require('react');
 var Arrow = require('./arrow');
 var SummaryButton = require('./summary_button');

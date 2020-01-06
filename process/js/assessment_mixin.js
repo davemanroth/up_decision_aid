@@ -1,3 +1,7 @@
+// This mixin module houses the algorithm that 
+// determines a user's risk of HIV based on answers 
+// to the About You step component
+
 var AssessmentMixin = {
 
   areAllZeros: function (responses) {
